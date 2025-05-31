@@ -1,0 +1,1688 @@
+DEBUG - 2025-05-25 16:41:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 16:42:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 16:42:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 16:42:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 16:43:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-25 16:43:19 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\bmc-with-ujian-main\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\bmc-with-ujian-main\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'newwhatever', 3307, '', 0)
+#1 C:\xampp\htdocs\bmc-with-ujian-main\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\bmc-with-ujian-main\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\bmc-with-ujian-main\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\bmc-with-ujian-main\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\bmc-with-ujian-main\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\bmc-with-ujian-main\app\Controllers\Courses.php(16): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\bmc-with-ujian-main\system\CodeIgniter.php(933): App\Controllers\Courses->index()
+#8 C:\xampp\htdocs\bmc-with-ujian-main\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Courses))
+#9 C:\xampp\htdocs\bmc-with-ujian-main\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\bmc-with-ujian-main\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\bmc-with-ujian-main\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\bmc-with-ujian-main\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\bmc-with-ujian-main\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\bmc-with-ujian-main\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\bmc-with-ujian-main\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\bmc-with-ujian-main\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\bmc-with-ujian-main\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\bmc-with-ujian-main\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\bmc-with-ujian-main\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\bmc-with-ujian-main\app\Controllers\Courses.php(16): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\bmc-with-ujian-main\system\CodeIgniter.php(933): App\Controllers\Courses->index()
+#7 C:\xampp\htdocs\bmc-with-ujian-main\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Courses))
+#8 C:\xampp\htdocs\bmc-with-ujian-main\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\bmc-with-ujian-main\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\bmc-with-ujian-main\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\bmc-with-ujian-main\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\bmc-with-ujian-main\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-05-25 16:43:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: courses]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `produk`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Courses.php(16): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Courses->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Courses))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 16:43:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 16:43:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-25 16:43:54 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\bmc-with-ujian-main\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\bmc-with-ujian-main\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'newwhatever', 3307, '', 0)
+#1 C:\xampp\htdocs\bmc-with-ujian-main\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\bmc-with-ujian-main\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\bmc-with-ujian-main\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\bmc-with-ujian-main\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\bmc-with-ujian-main\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\bmc-with-ujian-main\app\Controllers\Courses.php(16): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\bmc-with-ujian-main\system\CodeIgniter.php(933): App\Controllers\Courses->index()
+#8 C:\xampp\htdocs\bmc-with-ujian-main\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Courses))
+#9 C:\xampp\htdocs\bmc-with-ujian-main\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\bmc-with-ujian-main\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\bmc-with-ujian-main\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\bmc-with-ujian-main\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\bmc-with-ujian-main\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\bmc-with-ujian-main\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\bmc-with-ujian-main\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\bmc-with-ujian-main\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\bmc-with-ujian-main\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\bmc-with-ujian-main\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\bmc-with-ujian-main\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\bmc-with-ujian-main\app\Controllers\Courses.php(16): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\bmc-with-ujian-main\system\CodeIgniter.php(933): App\Controllers\Courses->index()
+#7 C:\xampp\htdocs\bmc-with-ujian-main\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Courses))
+#8 C:\xampp\htdocs\bmc-with-ujian-main\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\bmc-with-ujian-main\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\bmc-with-ujian-main\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\bmc-with-ujian-main\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\bmc-with-ujian-main\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-05-25 16:43:54 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: courses]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `produk`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Courses.php(16): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Courses->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Courses))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 16:44:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 16:45:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 16:46:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 16:46:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 16:46:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 16:46:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 16:46:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 16:47:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-25 16:47:13 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\bmc-with-ujian-main\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\bmc-with-ujian-main\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'newwhatever', 3307, '', 0)
+#1 C:\xampp\htdocs\bmc-with-ujian-main\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\bmc-with-ujian-main\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\bmc-with-ujian-main\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\bmc-with-ujian-main\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\bmc-with-ujian-main\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\bmc-with-ujian-main\app\Controllers\Courses.php(16): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\bmc-with-ujian-main\system\CodeIgniter.php(933): App\Controllers\Courses->index()
+#8 C:\xampp\htdocs\bmc-with-ujian-main\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Courses))
+#9 C:\xampp\htdocs\bmc-with-ujian-main\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\bmc-with-ujian-main\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\bmc-with-ujian-main\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\bmc-with-ujian-main\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\bmc-with-ujian-main\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\bmc-with-ujian-main\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\bmc-with-ujian-main\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\bmc-with-ujian-main\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\bmc-with-ujian-main\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\bmc-with-ujian-main\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\bmc-with-ujian-main\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\bmc-with-ujian-main\app\Controllers\Courses.php(16): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\bmc-with-ujian-main\system\CodeIgniter.php(933): App\Controllers\Courses->index()
+#7 C:\xampp\htdocs\bmc-with-ujian-main\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Courses))
+#8 C:\xampp\htdocs\bmc-with-ujian-main\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\bmc-with-ujian-main\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\bmc-with-ujian-main\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\bmc-with-ujian-main\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\bmc-with-ujian-main\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-05-25 16:47:13 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: courses]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `produk`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Courses.php(16): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Courses->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Courses))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 16:48:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-25 16:48:55 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\bmc-with-ujian-main\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\bmc-with-ujian-main\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'newwhatever', 3307, '', 0)
+#1 C:\xampp\htdocs\bmc-with-ujian-main\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\bmc-with-ujian-main\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\bmc-with-ujian-main\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\bmc-with-ujian-main\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\bmc-with-ujian-main\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\bmc-with-ujian-main\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\bmc-with-ujian-main\app\Controllers\Home.php(88): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\bmc-with-ujian-main\system\CodeIgniter.php(933): App\Controllers\Home->inputUser()
+#9 C:\xampp\htdocs\bmc-with-ujian-main\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\xampp\htdocs\bmc-with-ujian-main\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\bmc-with-ujian-main\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\bmc-with-ujian-main\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\bmc-with-ujian-main\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\bmc-with-ujian-main\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\bmc-with-ujian-main\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\bmc-with-ujian-main\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\bmc-with-ujian-main\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\bmc-with-ujian-main\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#3 C:\xampp\htdocs\bmc-with-ujian-main\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#4 C:\xampp\htdocs\bmc-with-ujian-main\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#5 C:\xampp\htdocs\bmc-with-ujian-main\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#6 C:\xampp\htdocs\bmc-with-ujian-main\app\Controllers\Home.php(88): CodeIgniter\Model->insert(Array)
+#7 C:\xampp\htdocs\bmc-with-ujian-main\system\CodeIgniter.php(933): App\Controllers\Home->inputUser()
+#8 C:\xampp\htdocs\bmc-with-ujian-main\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\xampp\htdocs\bmc-with-ujian-main\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\bmc-with-ujian-main\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\bmc-with-ujian-main\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\bmc-with-ujian-main\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\bmc-with-ujian-main\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2025-05-25 16:48:55 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: POST, Route: inputUser]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `user` (`username`, `email`, `password`, `full_name`, `role`, `date_birth`, `gender`, `phone`, `address`, `created_at`, `updated_at`) VALUES (:username:, :email:, :password:, :full_name:, :role:, :date_birth:, :gender:, :phone:, :address:, :created_at:, :updated_at:)', [...], false)
+ 3 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 4 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 5 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 6 APPPATH\Controllers\Home.php(88): CodeIgniter\Model->insert([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->inputUser()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+ERROR - 2025-05-25 16:49:33 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\bmc-with-ujian-main\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\bmc-with-ujian-main\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'newwhatever', 3307, '', 0)
+#1 C:\xampp\htdocs\bmc-with-ujian-main\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\bmc-with-ujian-main\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\bmc-with-ujian-main\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\bmc-with-ujian-main\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\bmc-with-ujian-main\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\bmc-with-ujian-main\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\bmc-with-ujian-main\app\Controllers\Home.php(88): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\bmc-with-ujian-main\system\CodeIgniter.php(933): App\Controllers\Home->inputUser()
+#9 C:\xampp\htdocs\bmc-with-ujian-main\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\xampp\htdocs\bmc-with-ujian-main\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\bmc-with-ujian-main\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\bmc-with-ujian-main\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\bmc-with-ujian-main\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\bmc-with-ujian-main\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\bmc-with-ujian-main\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\bmc-with-ujian-main\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\bmc-with-ujian-main\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\bmc-with-ujian-main\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#3 C:\xampp\htdocs\bmc-with-ujian-main\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#4 C:\xampp\htdocs\bmc-with-ujian-main\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#5 C:\xampp\htdocs\bmc-with-ujian-main\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#6 C:\xampp\htdocs\bmc-with-ujian-main\app\Controllers\Home.php(88): CodeIgniter\Model->insert(Array)
+#7 C:\xampp\htdocs\bmc-with-ujian-main\system\CodeIgniter.php(933): App\Controllers\Home->inputUser()
+#8 C:\xampp\htdocs\bmc-with-ujian-main\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\xampp\htdocs\bmc-with-ujian-main\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\bmc-with-ujian-main\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\bmc-with-ujian-main\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\bmc-with-ujian-main\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\bmc-with-ujian-main\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2025-05-25 16:49:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: POST, Route: inputUser]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `user` (`username`, `email`, `password`, `full_name`, `role`, `date_birth`, `gender`, `phone`, `address`, `created_at`, `updated_at`) VALUES (:username:, :email:, :password:, :full_name:, :role:, :date_birth:, :gender:, :phone:, :address:, :created_at:, :updated_at:)', [...], false)
+ 3 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 4 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 5 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 6 APPPATH\Controllers\Home.php(88): CodeIgniter\Model->insert([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->inputUser()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 16:50:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 16:50:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 16:50:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 16:50:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 16:50:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 16:51:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 16:51:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 16:51:02 --> ErrorException: Undefined variable $produk
+[Method: GET, Route: courses/detail/brem/img/icon%20bmc.png]
+in APPPATH\Views\MainPage\courses.php on line 138.
+ 1 APPPATH\Views\MainPage\courses.php(138): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $produk', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\courses.php', 138)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\courses.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/courses', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/courses')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('courses', 'detail', 'brem', 'img', 'icon bmc.png')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 16:51:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 16:51:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 16:51:06 --> ErrorException: Undefined variable $produk
+[Method: GET, Route: pembayaran/proses/brem/img/icon%20bmc.png]
+in APPPATH\Views\MainPage\pembayaran.php on line 150.
+ 1 APPPATH\Views\MainPage\pembayaran.php(150): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $produk', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pembayaran.php', 150)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pembayaran.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/pembayaran', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/pembayaran')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('pembayaran', 'proses', 'brem', 'img', 'icon bmc.png')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 16:51:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 16:51:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 16:51:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 16:52:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 16:52:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 16:52:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 16:52:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 16:52:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 16:52:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 16:53:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 16:53:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 16:53:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 16:53:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 16:53:57 --> ErrorException: Undefined variable $produk
+[Method: GET, Route: courses/detail/brem/img/icon%20bmc.png]
+in APPPATH\Views\MainPage\courses.php on line 138.
+ 1 APPPATH\Views\MainPage\courses.php(138): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $produk', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\courses.php', 138)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\courses.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/courses', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/courses')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('courses', 'detail', 'brem', 'img', 'icon bmc.png')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 16:54:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 16:54:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 16:54:00 --> ErrorException: Undefined variable $produk
+[Method: GET, Route: pembayaran/proses/brem/img/icon%20bmc.png]
+in APPPATH\Views\MainPage\pembayaran.php on line 150.
+ 1 APPPATH\Views\MainPage\pembayaran.php(150): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $produk', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pembayaran.php', 150)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pembayaran.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/pembayaran', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/pembayaran')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('pembayaran', 'proses', 'brem', 'img', 'icon bmc.png')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 16:54:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 16:56:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 16:56:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 16:56:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 16:56:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 16:56:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 16:56:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:03:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:04:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:04:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:04:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:04:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:04:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:04:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:04:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:04:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:04:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:04:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:04:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:04:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 17:04:55 --> ErrorException: Undefined variable $pengaturan
+[Method: GET, Route: mulaiujian/brem/img/icon%20bmc.png]
+in APPPATH\Views\MainPage\mulaiujian.php on line 169.
+ 1 APPPATH\Views\MainPage\mulaiujian.php(169): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pengaturan', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php', 169)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/mulaiujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/mulaiujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('mulaiujian', 'brem', 'img', 'icon bmc.png')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 17:05:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:05:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 17:05:07 --> ErrorException: Undefined variable $soal_list
+[Method: GET, Route: pengaturanujian/simpanjawaban/brem/img/icon%20bmc.png]
+in APPPATH\Views\MainPage\pengaturanujian.php on line 212.
+ 1 APPPATH\Views\MainPage\pengaturanujian.php(212): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $soal_list', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php', 212)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/pengaturanujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/pengaturanujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('pengaturanujian', 'simpanjawaban', 'brem', 'img', 'icon bmc.png')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 17:05:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 17:05:18 --> ErrorException: Undefined variable $pengaturan
+[Method: GET, Route: pilihujian]
+in APPPATH\Views\MainPage\pilihujian.php on line 172.
+ 1 APPPATH\Views\MainPage\pilihujian.php(172): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pengaturan', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pilihujian.php', 172)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pilihujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/pilihujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/pilihujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('pilihujian')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 17:08:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:08:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 17:08:14 --> ErrorException: Undefined variable $soal_list
+[Method: GET, Route: pengaturanujian/simpanjawaban/brem/img/icon%20bmc.png]
+in APPPATH\Views\MainPage\pengaturanujian.php on line 212.
+ 1 APPPATH\Views\MainPage\pengaturanujian.php(212): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $soal_list', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php', 212)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/pengaturanujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/pengaturanujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('pengaturanujian', 'simpanjawaban', 'brem', 'img', 'icon bmc.png')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 17:09:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 17:09:10 --> ErrorException: Undefined variable $pengaturan
+[Method: GET, Route: pilihujian]
+in APPPATH\Views\MainPage\pilihujian.php on line 172.
+ 1 APPPATH\Views\MainPage\pilihujian.php(172): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pengaturan', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pilihujian.php', 172)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pilihujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/pilihujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/pilihujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('pilihujian')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 17:10:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:10:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 17:10:41 --> ErrorException: Undefined variable $pengaturan
+[Method: GET, Route: mulaiujian/brem/img/icon%20bmc.png]
+in APPPATH\Views\MainPage\mulaiujian.php on line 169.
+ 1 APPPATH\Views\MainPage\mulaiujian.php(169): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pengaturan', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php', 169)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/mulaiujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/mulaiujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('mulaiujian', 'brem', 'img', 'icon bmc.png')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 17:10:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:10:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 17:10:44 --> ErrorException: Undefined variable $soal_list
+[Method: GET, Route: pengaturanujian/simpanjawaban/brem/img/icon%20bmc.png]
+in APPPATH\Views\MainPage\pengaturanujian.php on line 212.
+ 1 APPPATH\Views\MainPage\pengaturanujian.php(212): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $soal_list', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php', 212)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/pengaturanujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/pengaturanujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('pengaturanujian', 'simpanjawaban', 'brem', 'img', 'icon bmc.png')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 17:11:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:11:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:11:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 17:11:32 --> ErrorException: Undefined variable $pengaturan
+[Method: GET, Route: mulaiujian/brem/img/icon%20bmc.png]
+in APPPATH\Views\MainPage\mulaiujian.php on line 169.
+ 1 APPPATH\Views\MainPage\mulaiujian.php(169): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pengaturan', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php', 169)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/mulaiujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/mulaiujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('mulaiujian', 'brem', 'img', 'icon bmc.png')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 17:12:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:12:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:12:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:12:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:12:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:12:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:12:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:12:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:13:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:14:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:15:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:15:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:16:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:16:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:18:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:18:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:18:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:19:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:19:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:19:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:19:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:19:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:19:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:20:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:20:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:20:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:20:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:20:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:20:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:20:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:20:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:20:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:20:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:20:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 17:20:43 --> ErrorException: Undefined variable $pengaturan
+[Method: GET, Route: mulaiujian/brem/img/icon%20bmc.png]
+in APPPATH\Views\MainPage\mulaiujian.php on line 169.
+ 1 APPPATH\Views\MainPage\mulaiujian.php(169): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pengaturan', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php', 169)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/mulaiujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/mulaiujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('mulaiujian', 'brem', 'img', 'icon bmc.png')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 17:22:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:22:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:22:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:22:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:28:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:28:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 17:28:10 --> ErrorException: Undefined variable $pengaturan
+[Method: GET, Route: /]
+in APPPATH\Views\MainPage\index.php on line 225.
+ 1 APPPATH\Views\MainPage\index.php(225): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pengaturan', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\index.php', 225)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('/MainPage/index', [], true)
+ 5 APPPATH\Controllers\Home.php(24): view('/MainPage/index')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 17:28:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 17:28:30 --> ErrorException: Undefined variable $pengaturan
+[Method: GET, Route: /]
+in APPPATH\Views\MainPage\index.php on line 225.
+ 1 APPPATH\Views\MainPage\index.php(225): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pengaturan', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\index.php', 225)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('/MainPage/index', [], true)
+ 5 APPPATH\Controllers\Home.php(24): view('/MainPage/index')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 17:28:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:28:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:28:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 17:28:39 --> ErrorException: Undefined variable $pengaturan
+[Method: GET, Route: /]
+in APPPATH\Views\MainPage\index.php on line 225.
+ 1 APPPATH\Views\MainPage\index.php(225): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pengaturan', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\index.php', 225)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('/MainPage/index', [], true)
+ 5 APPPATH\Controllers\Home.php(24): view('/MainPage/index')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 17:28:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:28:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:28:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:28:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 17:28:54 --> ErrorException: Undefined variable $pengaturan
+[Method: GET, Route: /]
+in APPPATH\Views\MainPage\index.php on line 225.
+ 1 APPPATH\Views\MainPage\index.php(225): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pengaturan', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\index.php', 225)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('/MainPage/index', [], true)
+ 5 APPPATH\Controllers\Home.php(24): view('/MainPage/index')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 17:29:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:29:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:29:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:30:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:30:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 17:30:01 --> ErrorException: Undefined variable $pengaturan
+[Method: GET, Route: mulaiujian/brem/img/icon%20bmc.png]
+in APPPATH\Views\MainPage\mulaiujian.php on line 225.
+ 1 APPPATH\Views\MainPage\mulaiujian.php(225): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pengaturan', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php', 225)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/mulaiujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/mulaiujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('mulaiujian', 'brem', 'img', 'icon bmc.png')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 17:31:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:31:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:31:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 17:31:05 --> ErrorException: Undefined variable $pengaturan
+[Method: GET, Route: mulaiujian/brem/img/icon%20bmc.png]
+in APPPATH\Views\MainPage\mulaiujian.php on line 225.
+ 1 APPPATH\Views\MainPage\mulaiujian.php(225): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pengaturan', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php', 225)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/mulaiujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/mulaiujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('mulaiujian', 'brem', 'img', 'icon bmc.png')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 17:32:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:32:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:32:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 17:32:08 --> ErrorException: Undefined variable $pengaturan
+[Method: GET, Route: mulaiujian/brem/img/icon%20bmc.png]
+in APPPATH\Views\MainPage\mulaiujian.php on line 225.
+ 1 APPPATH\Views\MainPage\mulaiujian.php(225): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pengaturan', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php', 225)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/mulaiujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/mulaiujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('mulaiujian', 'brem', 'img', 'icon bmc.png')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 17:33:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:33:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:33:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 17:33:14 --> ErrorException: Undefined variable $pengaturan
+[Method: GET, Route: mulaiujian/brem/img/icon%20bmc.png]
+in APPPATH\Views\MainPage\mulaiujian.php on line 225.
+ 1 APPPATH\Views\MainPage\mulaiujian.php(225): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pengaturan', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php', 225)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/mulaiujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/mulaiujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('mulaiujian', 'brem', 'img', 'icon bmc.png')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 17:34:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:34:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:34:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 17:34:15 --> ErrorException: Undefined variable $pengaturan
+[Method: GET, Route: mulaiujian/brem/img/icon%20bmc.png]
+in APPPATH\Views\MainPage\mulaiujian.php on line 225.
+ 1 APPPATH\Views\MainPage\mulaiujian.php(225): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pengaturan', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php', 225)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/mulaiujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/mulaiujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('mulaiujian', 'brem', 'img', 'icon bmc.png')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 17:41:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:41:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 17:41:56 --> ErrorException: Undefined variable $pengaturan
+[Method: GET, Route: mulaiujian/brem/img/icon%20bmc.png]
+in APPPATH\Views\MainPage\mulaiujian.php on line 225.
+ 1 APPPATH\Views\MainPage\mulaiujian.php(225): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pengaturan', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php', 225)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/mulaiujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/mulaiujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('mulaiujian', 'brem', 'img', 'icon bmc.png')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 17:42:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:42:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:42:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 17:42:58 --> ErrorException: Undefined variable $pengaturan
+[Method: GET, Route: mulaiujian/brem/img/icon%20bmc.png]
+in APPPATH\Views\MainPage\mulaiujian.php on line 225.
+ 1 APPPATH\Views\MainPage\mulaiujian.php(225): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pengaturan', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php', 225)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/mulaiujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/mulaiujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('mulaiujian', 'brem', 'img', 'icon bmc.png')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 17:44:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:44:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:44:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 17:44:02 --> ErrorException: Undefined variable $pengaturan
+[Method: GET, Route: mulaiujian/brem/img/icon%20bmc.png]
+in APPPATH\Views\MainPage\mulaiujian.php on line 225.
+ 1 APPPATH\Views\MainPage\mulaiujian.php(225): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pengaturan', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php', 225)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/mulaiujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/mulaiujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('mulaiujian', 'brem', 'img', 'icon bmc.png')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 17:45:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:45:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:45:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 17:45:06 --> ErrorException: Undefined variable $pengaturan
+[Method: GET, Route: mulaiujian/brem/img/icon%20bmc.png]
+in APPPATH\Views\MainPage\mulaiujian.php on line 225.
+ 1 APPPATH\Views\MainPage\mulaiujian.php(225): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pengaturan', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php', 225)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/mulaiujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/mulaiujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('mulaiujian', 'brem', 'img', 'icon bmc.png')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 17:46:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:46:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:46:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 17:46:07 --> ErrorException: Undefined variable $pengaturan
+[Method: GET, Route: mulaiujian/brem/img/icon%20bmc.png]
+in APPPATH\Views\MainPage\mulaiujian.php on line 225.
+ 1 APPPATH\Views\MainPage\mulaiujian.php(225): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pengaturan', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php', 225)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/mulaiujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/mulaiujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('mulaiujian', 'brem', 'img', 'icon bmc.png')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 17:47:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:47:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:47:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 17:47:10 --> ErrorException: Undefined variable $pengaturan
+[Method: GET, Route: mulaiujian/brem/img/icon%20bmc.png]
+in APPPATH\Views\MainPage\mulaiujian.php on line 225.
+ 1 APPPATH\Views\MainPage\mulaiujian.php(225): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pengaturan', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php', 225)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/mulaiujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/mulaiujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('mulaiujian', 'brem', 'img', 'icon bmc.png')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 17:48:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:48:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:48:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 17:48:11 --> ErrorException: Undefined variable $pengaturan
+[Method: GET, Route: mulaiujian/brem/img/icon%20bmc.png]
+in APPPATH\Views\MainPage\mulaiujian.php on line 225.
+ 1 APPPATH\Views\MainPage\mulaiujian.php(225): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pengaturan', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php', 225)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/mulaiujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/mulaiujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('mulaiujian', 'brem', 'img', 'icon bmc.png')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 17:49:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:49:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:49:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 17:49:12 --> ErrorException: Undefined variable $pengaturan
+[Method: GET, Route: mulaiujian/brem/img/icon%20bmc.png]
+in APPPATH\Views\MainPage\mulaiujian.php on line 225.
+ 1 APPPATH\Views\MainPage\mulaiujian.php(225): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pengaturan', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php', 225)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/mulaiujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/mulaiujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('mulaiujian', 'brem', 'img', 'icon bmc.png')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 17:50:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:50:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:50:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 17:50:18 --> ErrorException: Undefined variable $pengaturan
+[Method: GET, Route: mulaiujian/brem/img/icon%20bmc.png]
+in APPPATH\Views\MainPage\mulaiujian.php on line 225.
+ 1 APPPATH\Views\MainPage\mulaiujian.php(225): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pengaturan', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php', 225)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/mulaiujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/mulaiujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('mulaiujian', 'brem', 'img', 'icon bmc.png')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 17:51:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:51:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:51:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 17:51:19 --> ErrorException: Undefined variable $pengaturan
+[Method: GET, Route: mulaiujian/brem/img/icon%20bmc.png]
+in APPPATH\Views\MainPage\mulaiujian.php on line 225.
+ 1 APPPATH\Views\MainPage\mulaiujian.php(225): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pengaturan', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php', 225)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/mulaiujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/mulaiujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('mulaiujian', 'brem', 'img', 'icon bmc.png')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 17:52:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:52:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:52:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 17:52:21 --> ErrorException: Undefined variable $pengaturan
+[Method: GET, Route: mulaiujian/brem/img/icon%20bmc.png]
+in APPPATH\Views\MainPage\mulaiujian.php on line 225.
+ 1 APPPATH\Views\MainPage\mulaiujian.php(225): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pengaturan', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php', 225)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/mulaiujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/mulaiujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('mulaiujian', 'brem', 'img', 'icon bmc.png')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 17:53:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:53:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:53:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 17:53:22 --> ErrorException: Undefined variable $pengaturan
+[Method: GET, Route: mulaiujian/brem/img/icon%20bmc.png]
+in APPPATH\Views\MainPage\mulaiujian.php on line 225.
+ 1 APPPATH\Views\MainPage\mulaiujian.php(225): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pengaturan', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php', 225)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/mulaiujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/mulaiujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('mulaiujian', 'brem', 'img', 'icon bmc.png')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 17:55:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:55:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:55:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 17:55:19 --> ErrorException: Undefined variable $pengaturan
+[Method: GET, Route: mulaiujian/brem/img/icon%20bmc.png]
+in APPPATH\Views\MainPage\mulaiujian.php on line 225.
+ 1 APPPATH\Views\MainPage\mulaiujian.php(225): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pengaturan', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php', 225)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/mulaiujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/mulaiujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('mulaiujian', 'brem', 'img', 'icon bmc.png')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 17:57:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:57:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:57:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 17:57:18 --> ErrorException: Undefined variable $pengaturan
+[Method: GET, Route: mulaiujian/brem/img/icon%20bmc.png]
+in APPPATH\Views\MainPage\mulaiujian.php on line 225.
+ 1 APPPATH\Views\MainPage\mulaiujian.php(225): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pengaturan', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php', 225)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/mulaiujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/mulaiujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('mulaiujian', 'brem', 'img', 'icon bmc.png')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 17:58:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:58:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:58:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 17:58:19 --> ErrorException: Undefined variable $pengaturan
+[Method: GET, Route: mulaiujian/brem/img/icon%20bmc.png]
+in APPPATH\Views\MainPage\mulaiujian.php on line 225.
+ 1 APPPATH\Views\MainPage\mulaiujian.php(225): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pengaturan', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php', 225)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/mulaiujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/mulaiujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('mulaiujian', 'brem', 'img', 'icon bmc.png')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 17:59:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:59:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 17:59:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 17:59:20 --> ErrorException: Undefined variable $pengaturan
+[Method: GET, Route: mulaiujian/brem/img/icon%20bmc.png]
+in APPPATH\Views\MainPage\mulaiujian.php on line 225.
+ 1 APPPATH\Views\MainPage\mulaiujian.php(225): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pengaturan', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php', 225)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/mulaiujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/mulaiujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('mulaiujian', 'brem', 'img', 'icon bmc.png')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 18:05:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:05:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 18:05:18 --> ErrorException: Undefined variable $pengaturan
+[Method: GET, Route: mulaiujian/brem/img/icon%20bmc.png]
+in APPPATH\Views\MainPage\mulaiujian.php on line 235.
+ 1 APPPATH\Views\MainPage\mulaiujian.php(235): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pengaturan', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php', 235)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/mulaiujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/mulaiujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('mulaiujian', 'brem', 'img', 'icon bmc.png')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 18:10:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:10:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:10:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:10:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 18:10:13 --> ErrorException: Undefined variable $pengaturan
+[Method: GET, Route: mulaiujian/brem/img/icon%20bmc.png]
+in APPPATH\Views\MainPage\mulaiujian.php on line 237.
+ 1 APPPATH\Views\MainPage\mulaiujian.php(237): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pengaturan', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php', 237)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/mulaiujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/mulaiujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('mulaiujian', 'brem', 'img', 'icon bmc.png')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 18:11:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:11:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 18:11:21 --> ErrorException: Undefined variable $soal_list
+[Method: GET, Route: pengaturanujian/simpanjawaban/brem/img/icon%20bmc.png]
+in APPPATH\Views\MainPage\pengaturanujian.php on line 212.
+ 1 APPPATH\Views\MainPage\pengaturanujian.php(212): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $soal_list', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php', 212)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/pengaturanujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/pengaturanujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('pengaturanujian', 'simpanjawaban', 'brem', 'img', 'icon bmc.png')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 18:12:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 18:12:05 --> ErrorException: Undefined variable $pengaturan
+[Method: GET, Route: pilihujian]
+in APPPATH\Views\MainPage\pilihujian.php on line 172.
+ 1 APPPATH\Views\MainPage\pilihujian.php(172): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pengaturan', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pilihujian.php', 172)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pilihujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/pilihujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/pilihujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('pilihujian')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 18:12:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:12:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 18:12:09 --> ErrorException: Undefined variable $soal_list
+[Method: GET, Route: pengaturanujian/ujian]
+in APPPATH\Views\MainPage\pengaturanujian.php on line 212.
+ 1 APPPATH\Views\MainPage\pengaturanujian.php(212): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $soal_list', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php', 212)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/pengaturanujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/pengaturanujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('pengaturanujian', 'ujian')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 18:12:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:12:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:12:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 18:12:15 --> ErrorException: Undefined variable $soal_list
+[Method: GET, Route: pengaturanujian/ujian]
+in APPPATH\Views\MainPage\pengaturanujian.php on line 212.
+ 1 APPPATH\Views\MainPage\pengaturanujian.php(212): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $soal_list', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php', 212)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/pengaturanujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/pengaturanujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('pengaturanujian', 'ujian')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 18:12:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:12:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:12:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:12:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 18:12:43 --> ErrorException: Undefined variable $soal_list
+[Method: GET, Route: pengaturanujian/ujian]
+in APPPATH\Views\MainPage\pengaturanujian.php on line 212.
+ 1 APPPATH\Views\MainPage\pengaturanujian.php(212): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $soal_list', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php', 212)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/pengaturanujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/pengaturanujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('pengaturanujian', 'ujian')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 18:14:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 18:14:25 --> ErrorException: Undefined variable $soal_list
+[Method: GET, Route: pengaturanujian/ujian]
+in APPPATH\Views\MainPage\pengaturanujian.php on line 212.
+ 1 APPPATH\Views\MainPage\pengaturanujian.php(212): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $soal_list', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php', 212)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/pengaturanujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/pengaturanujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('pengaturanujian', 'ujian')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 18:14:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 18:14:27 --> ErrorException: Undefined variable $soal_list
+[Method: GET, Route: pengaturanujian/ujian]
+in APPPATH\Views\MainPage\pengaturanujian.php on line 212.
+ 1 APPPATH\Views\MainPage\pengaturanujian.php(212): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $soal_list', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php', 212)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/pengaturanujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/pengaturanujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('pengaturanujian', 'ujian')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 18:14:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 18:14:35 --> ErrorException: Undefined variable $soal_list
+[Method: GET, Route: pengaturanujian/ujian]
+in APPPATH\Views\MainPage\pengaturanujian.php on line 212.
+ 1 APPPATH\Views\MainPage\pengaturanujian.php(212): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $soal_list', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php', 212)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/pengaturanujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/pengaturanujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('pengaturanujian', 'ujian')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 18:15:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:15:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:15:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 18:15:06 --> ErrorException: Undefined variable $soal_list
+[Method: GET, Route: pengaturanujian/ujian]
+in APPPATH\Views\MainPage\pengaturanujian.php on line 212.
+ 1 APPPATH\Views\MainPage\pengaturanujian.php(212): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $soal_list', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php', 212)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/pengaturanujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/pengaturanujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('pengaturanujian', 'ujian')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 18:15:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 18:15:18 --> ErrorException: Undefined variable $soal_list
+[Method: GET, Route: pengaturanujian/ujian]
+in APPPATH\Views\MainPage\pengaturanujian.php on line 212.
+ 1 APPPATH\Views\MainPage\pengaturanujian.php(212): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $soal_list', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php', 212)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/pengaturanujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/pengaturanujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('pengaturanujian', 'ujian')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 18:15:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 18:15:20 --> ErrorException: Undefined variable $soal_list
+[Method: GET, Route: pengaturanujian/ujian]
+in APPPATH\Views\MainPage\pengaturanujian.php on line 212.
+ 1 APPPATH\Views\MainPage\pengaturanujian.php(212): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $soal_list', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php', 212)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/pengaturanujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/pengaturanujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('pengaturanujian', 'ujian')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 18:15:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:15:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:15:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 18:15:24 --> ErrorException: Undefined variable $soal_list
+[Method: GET, Route: pengaturanujian/ujian]
+in APPPATH\Views\MainPage\pengaturanujian.php on line 212.
+ 1 APPPATH\Views\MainPage\pengaturanujian.php(212): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $soal_list', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php', 212)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/pengaturanujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/pengaturanujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('pengaturanujian', 'ujian')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 18:15:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:15:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:15:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:15:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:15:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 18:15:45 --> ErrorException: Undefined variable $soal_list
+[Method: GET, Route: pengaturanujian/ujian]
+in APPPATH\Views\MainPage\pengaturanujian.php on line 212.
+ 1 APPPATH\Views\MainPage\pengaturanujian.php(212): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $soal_list', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php', 212)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/pengaturanujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/pengaturanujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('pengaturanujian', 'ujian')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 18:16:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:16:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:16:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:16:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 18:16:31 --> ErrorException: Undefined variable $soal_list
+[Method: GET, Route: pengaturanujian/ujian]
+in APPPATH\Views\MainPage\pengaturanujian.php on line 212.
+ 1 APPPATH\Views\MainPage\pengaturanujian.php(212): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $soal_list', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php', 212)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/pengaturanujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/pengaturanujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('pengaturanujian', 'ujian')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 18:16:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 18:16:46 --> ErrorException: Undefined variable $soal_list
+[Method: GET, Route: pengaturanujian/ujian]
+in APPPATH\Views\MainPage\pengaturanujian.php on line 212.
+ 1 APPPATH\Views\MainPage\pengaturanujian.php(212): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $soal_list', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php', 212)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/pengaturanujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/pengaturanujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('pengaturanujian', 'ujian')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 18:16:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 18:16:48 --> ErrorException: Undefined variable $soal_list
+[Method: GET, Route: pengaturanujian/ujian]
+in APPPATH\Views\MainPage\pengaturanujian.php on line 212.
+ 1 APPPATH\Views\MainPage\pengaturanujian.php(212): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $soal_list', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php', 212)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/pengaturanujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/pengaturanujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('pengaturanujian', 'ujian')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 18:16:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 18:16:48 --> ErrorException: Undefined variable $soal_list
+[Method: GET, Route: pengaturanujian/ujian]
+in APPPATH\Views\MainPage\pengaturanujian.php on line 212.
+ 1 APPPATH\Views\MainPage\pengaturanujian.php(212): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $soal_list', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php', 212)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/pengaturanujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/pengaturanujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('pengaturanujian', 'ujian')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 18:16:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 18:16:48 --> ErrorException: Undefined variable $soal_list
+[Method: GET, Route: pengaturanujian/ujian]
+in APPPATH\Views\MainPage\pengaturanujian.php on line 212.
+ 1 APPPATH\Views\MainPage\pengaturanujian.php(212): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $soal_list', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php', 212)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/pengaturanujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/pengaturanujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('pengaturanujian', 'ujian')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 18:16:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 18:16:48 --> ErrorException: Undefined variable $soal_list
+[Method: GET, Route: pengaturanujian/ujian]
+in APPPATH\Views\MainPage\pengaturanujian.php on line 212.
+ 1 APPPATH\Views\MainPage\pengaturanujian.php(212): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $soal_list', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php', 212)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/pengaturanujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/pengaturanujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('pengaturanujian', 'ujian')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 18:16:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 18:16:49 --> ErrorException: Undefined variable $soal_list
+[Method: GET, Route: pengaturanujian/ujian]
+in APPPATH\Views\MainPage\pengaturanujian.php on line 212.
+ 1 APPPATH\Views\MainPage\pengaturanujian.php(212): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $soal_list', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php', 212)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/pengaturanujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/pengaturanujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('pengaturanujian', 'ujian')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 18:16:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 18:16:49 --> ErrorException: Undefined variable $soal_list
+[Method: GET, Route: pengaturanujian/ujian]
+in APPPATH\Views\MainPage\pengaturanujian.php on line 212.
+ 1 APPPATH\Views\MainPage\pengaturanujian.php(212): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $soal_list', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php', 212)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/pengaturanujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/pengaturanujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('pengaturanujian', 'ujian')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 18:16:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:16:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:16:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:16:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 18:16:54 --> ErrorException: Undefined variable $soal_list
+[Method: GET, Route: pengaturanujian/ujian]
+in APPPATH\Views\MainPage\pengaturanujian.php on line 212.
+ 1 APPPATH\Views\MainPage\pengaturanujian.php(212): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $soal_list', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php', 212)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/pengaturanujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/pengaturanujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('pengaturanujian', 'ujian')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 18:17:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 18:17:57 --> ErrorException: Undefined variable $soal_list
+[Method: GET, Route: pengaturanujian/ujian]
+in APPPATH\Views\MainPage\pengaturanujian.php on line 212.
+ 1 APPPATH\Views\MainPage\pengaturanujian.php(212): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $soal_list', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php', 212)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/pengaturanujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/pengaturanujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('pengaturanujian', 'ujian')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 18:17:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 18:17:58 --> ErrorException: Undefined variable $soal_list
+[Method: GET, Route: pengaturanujian/ujian]
+in APPPATH\Views\MainPage\pengaturanujian.php on line 212.
+ 1 APPPATH\Views\MainPage\pengaturanujian.php(212): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $soal_list', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php', 212)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/pengaturanujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/pengaturanujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('pengaturanujian', 'ujian')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 18:18:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:18:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:18:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:18:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 18:18:05 --> ErrorException: Undefined variable $soal_list
+[Method: GET, Route: pengaturanujian/ujian]
+in APPPATH\Views\MainPage\pengaturanujian.php on line 212.
+ 1 APPPATH\Views\MainPage\pengaturanujian.php(212): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $soal_list', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php', 212)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/pengaturanujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/pengaturanujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('pengaturanujian', 'ujian')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 18:20:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 18:20:05 --> ErrorException: Undefined variable $soal_list
+[Method: GET, Route: pengaturanujian/ujian]
+in APPPATH\Views\MainPage\pengaturanujian.php on line 212.
+ 1 APPPATH\Views\MainPage\pengaturanujian.php(212): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $soal_list', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php', 212)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/pengaturanujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/pengaturanujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('pengaturanujian', 'ujian')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 18:22:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:22:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:22:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 18:22:57 --> ErrorException: Undefined variable $soal_list
+[Method: GET, Route: pengaturanujian/ujian]
+in APPPATH\Views\MainPage\pengaturanujian.php on line 212.
+ 1 APPPATH\Views\MainPage\pengaturanujian.php(212): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $soal_list', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php', 212)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/pengaturanujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/pengaturanujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('pengaturanujian', 'ujian')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 18:31:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 18:31:02 --> ErrorException: Undefined variable $soal_list
+[Method: GET, Route: pengaturanujian/ujian]
+in APPPATH\Views\MainPage\pengaturanujian.php on line 212.
+ 1 APPPATH\Views\MainPage\pengaturanujian.php(212): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $soal_list', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php', 212)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/pengaturanujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/pengaturanujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('pengaturanujian', 'ujian')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 18:31:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 18:31:03 --> ErrorException: Undefined variable $soal_list
+[Method: GET, Route: pengaturanujian/ujian]
+in APPPATH\Views\MainPage\pengaturanujian.php on line 212.
+ 1 APPPATH\Views\MainPage\pengaturanujian.php(212): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $soal_list', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php', 212)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pengaturanujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/pengaturanujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/pengaturanujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('pengaturanujian', 'ujian')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 18:39:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:39:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:39:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:39:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:39:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:40:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:40:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:40:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:40:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:40:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:40:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:40:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:40:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:41:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:41:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:41:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:41:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 18:41:09 --> ErrorException: Undefined variable $pengaturan
+[Method: GET, Route: mulaiujian/brem/img/icon%20bmc.png]
+in APPPATH\Views\MainPage\mulaiujian.php on line 237.
+ 1 APPPATH\Views\MainPage\mulaiujian.php(237): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pengaturan', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php', 237)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/mulaiujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/mulaiujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('mulaiujian', 'brem', 'img', 'icon bmc.png')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 18:42:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:42:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:42:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 18:42:16 --> ErrorException: Undefined variable $pengaturan
+[Method: GET, Route: mulaiujian/brem/img/icon%20bmc.png]
+in APPPATH\Views\MainPage\mulaiujian.php on line 237.
+ 1 APPPATH\Views\MainPage\mulaiujian.php(237): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pengaturan', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php', 237)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/mulaiujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/mulaiujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('mulaiujian', 'brem', 'img', 'icon bmc.png')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 18:42:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:49:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:50:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:51:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:51:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:52:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:53:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:53:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:54:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:55:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:55:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:56:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:56:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:56:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 18:56:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 19:02:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 19:02:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 19:03:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 19:03:13 --> ErrorException: Undefined variable $pengaturan
+[Method: GET, Route: mulaiujian/brem/img/icon%20bmc.png]
+in APPPATH\Views\MainPage\mulaiujian.php on line 98.
+ 1 APPPATH\Views\MainPage\mulaiujian.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pengaturan', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php', 98)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/mulaiujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/mulaiujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('mulaiujian', 'brem', 'img', 'icon bmc.png')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 19:28:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 19:28:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 19:29:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 19:29:35 --> ErrorException: Undefined variable $pengaturan
+[Method: GET, Route: mulaiujian/brem/img/icon%20bmc.png]
+in APPPATH\Views\MainPage\mulaiujian.php on line 98.
+ 1 APPPATH\Views\MainPage\mulaiujian.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pengaturan', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php', 98)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\mulaiujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/mulaiujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/mulaiujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('mulaiujian', 'brem', 'img', 'icon bmc.png')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 19:45:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-25 19:45:21 --> ErrorException: Undefined variable $pengaturan
+[Method: GET, Route: pilihujian]
+in APPPATH\Views\MainPage\pilihujian.php on line 172.
+ 1 APPPATH\Views\MainPage\pilihujian.php(172): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pengaturan', 'C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pilihujian.php', 172)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\bmc-with-ujian-main\\app\\Views\\MainPage\\pilihujian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('MainPage/pilihujian', [], true)
+ 5 APPPATH\Controllers\Pages.php(18): view('MainPage/pilihujian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->view('pilihujian')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\bmc-with-ujian-main\\public\\index.php')
+DEBUG - 2025-05-25 19:45:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 19:46:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 19:46:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 19:46:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 19:46:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 19:46:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 19:49:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 19:49:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 19:49:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 19:49:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 19:49:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 19:49:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 19:49:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 19:49:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 19:49:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 19:49:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 19:50:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 19:50:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 19:50:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 20:03:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 20:03:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 20:07:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 20:09:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 20:10:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 20:30:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 20:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 20:50:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 20:50:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 20:50:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 20:53:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-25 20:54:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
