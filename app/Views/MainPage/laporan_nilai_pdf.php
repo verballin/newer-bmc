@@ -38,7 +38,7 @@
                 <th>Nama Ujian</th>
                 <th>Nilai</th>
                 <th>Status</th>
-                <!-- <th>Tanggal</th> -->
+                <th>Tanggal</th>
             </tr>
         </thead>
         <tbody>
@@ -50,7 +50,7 @@
                     <td><?= $row->nama_ujian ?></td>
                     <td><?= $row->nilai ?></td>
                     <td><?= $row->status ?></td>
-                    <!-- <td><?= $row->tanggal ?></td> -->
+                    <td><?= $row->tanggal ?></td>
                 </tr>
             <?php endforeach ?>
         </tbody>

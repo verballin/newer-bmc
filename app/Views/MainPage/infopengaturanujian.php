@@ -4,13 +4,13 @@
 <head>
     <meta charset="utf-8" />
     <meta name="google-translate-customization" content="9f841e7780177523-3214ceb76f765f38-gc38c6fe6f9d06436-c" />
-    <title>BMC : Pengaturan Ujian</title>
+    <title>Pengaturan Ujian</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="" name="keywords" />
     <meta content="" name="description" />
 
     <!-- Favicon -->
-    <link href="<?= base_url('brem/img/icon bmc.png') ?>" rel="icon" />
+    <!-- <link href="<?= base_url('brem/img/icon bmc.png') ?>" rel="icon" /> -->
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -65,7 +65,7 @@
         }
 
         .ck-editor__editable[role="textbox"] {
-            min-height:100px;
+            min-height: 100px;
         }
     </style>
 </head>
@@ -83,87 +83,91 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
         <a href="index.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <p class="m-0 fw-bold" style="font-size: 25px;"><img src="brem/img/icon bmc.png" alt="" height="50px"><span
-                    style="color: #fb873f;"></span></p>
+            <!-- <p class="m-0 fw-bold" style="font-size: 25px;"><img src="brem/img/icon bmc.png" alt="" height="50px"><span
+                    style="color: #fb873f;"></span></p> -->
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-            <?php
-            $session=session();
-            $isLoggedIn = $session->get('login') === true;
-            ?>
-            <div class="nav-item dropdown">
-                <?php if ($isLoggedIn) { ?>
-                    <a href="#" class="nav-item nav-link" data-bs-toggle="dropdown"><i class="fa fa-user"></i></a>
-                    <div class="dropdown-menu fade-down m-0">
-                        <?php if (session()->get('role') === 'Admin') : ?>
-                        <a href="<?= site_url('kelolauser') ?>" class="dropdown-item">Kelola User</a>    
-                        <a href="<?= site_url('inputproduk') ?>" class="dropdown-item">Input Produk</a>   
-                        <a href="<?= site_url('laporanpenjualan') ?>" class="dropdown-item">Laporan Penjualan</a>
-                        <a href="<?= site_url('laporankeuntungan') ?>" class="dropdown-item">Laporan Keuntungan</a>
-                        <?php endif; ?>
-                        <a href="<?= site_url('historipembelian') ?>" class="dropdown-item">Histori Pembelian</a>
-                        <form action="<?= site_url('/logout') ?>" method="post" style="display: inline;">
-                        <button type="submit" class="dropdown-item">Logout</button>
-                        </form>
-                    </div>
-                <?php } else { ?>
-                    <a href="<?= site_url('login') ?>" class="nav-item nav-link"><i class="fa fa-user"></i></a>
-                <?php } ?>
-            </div>
+                <?php
+                $session = session();
+                $isLoggedIn = $session->get('login') === true;
+                ?>
+                <div class="nav-item dropdown">
+                    <?php if ($isLoggedIn) { ?>
+                        <a href="#" class="nav-item nav-link" data-bs-toggle="dropdown"><i class="fa fa-user"></i></a>
+                        <div class="dropdown-menu fade-down m-0">
+                            <?php if (session()->get('role') === 'Admin') : ?>
+                                <a href="<?= site_url('kelolauser') ?>" class="dropdown-item">Kelola User</a>
+                                <a href="<?= site_url('inputproduk') ?>" class="dropdown-item">Input Produk</a>
+                                <a href="<?= site_url('laporanpenjualan') ?>" class="dropdown-item">Laporan Penjualan</a>
+                                <a href="<?= site_url('laporankeuntungan') ?>" class="dropdown-item">Laporan Keuntungan</a>
+                                <a href="<?= site_url('laporan/user') ?>" class="dropdown-item">Laporan User</a>
+                            <?php endif; ?>
+                            <a href="<?= site_url('historipembelian') ?>" class="dropdown-item">Histori Pembelian</a>
+                            <form action="<?= site_url('/logout') ?>" method="post" style="display: inline;">
+                                <button type="submit" class="dropdown-item">Logout</button>
+                            </form>
+                        </div>
+                    <?php } else { ?>
+                        <a href="<?= site_url('login') ?>" class="nav-item nav-link"><i class="fa fa-user"></i></a>
+                    <?php } ?>
+                </div>
 
-                <a href="<?= base_url()?>" class="nav-item nav-link">Beranda</a>
+                <a href="<?= base_url() ?>" class="nav-item nav-link">Beranda</a>
                 <a href="<?= site_url('about') ?>" class="nav-item nav-link">Tentang</a>
                 <a href="<?= site_url('courses') ?>" class="nav-item nav-link">Kursus</a>
                 <div class="nav-item dropdown">
-                <?php if($isLoggedIn) { ?>
-                    <a href="#" class="nav-item nav-link" data-bs-toggle="dropdown">Simulasi</a>
+                    <?php if ($isLoggedIn) { ?>
+                        <a href="#" class="nav-item nav-link" data-bs-toggle="dropdown">Simulasi</a>
                         <div class="dropdown-menu fade-down m-0">
                             <?php if (session()->get('role') === 'Admin') : ?>
-                            <a href="<?= site_url('infopengaturanujian') ?>" class="dropdown-item">Pengaturan Ujian</a>
-                            <a href="<?= site_url('tambahsoal') ?>" class="dropdown-item">Tambah Soal Ujian</a>
-                            <a href="<?= site_url('daftarsoal') ?>" class="dropdown-item">Lihat Daftar Soal Ujian</a>
+                                <a href="<?= site_url('infopengaturanujian') ?>" class="dropdown-item">Pengaturan Ujian</a>
+                                <a href="<?= site_url('tambahsoal') ?>" class="dropdown-item">Tambah Soal Ujian</a>
+                                <a href="<?= site_url('daftarsoal') ?>" class="dropdown-item">Lihat Daftar Soal Ujian</a>
+                                <a href="<?= site_url('laporan') ?>" class="dropdown-item">Lihat Laporan Nilai Ujian</a>
                             <?php endif; ?>
-                            <a href="<?= site_url('ujian') ?>" class="dropdown-item">Pilih Ujian</a>   
+                            <?php if (session()->get('role') === 'Siswa') : ?>
+                                <a href="<?= site_url('ujian') ?>" class="dropdown-item">Pilih Ujian</a>
+                            <?php endif; ?>
                         </div>
                     <?php } ?>
                 </div>
                 <a href="<?= site_url('contact') ?>" class="nav-item nav-link">Kontak</a>
-     
-                </div>
-                
 
-                <div id="google_translate_element">
-                </div>
-
-
-                </a>
             </div>
+
+
+            <div id="google_translate_element">
+            </div>
+
+
+            </a>
+        </div>
         </div>
     </nav>
     <!-- Navbar End -->
 
-<!-- Header Start -->
-<div class="container-fluid bg-primary py-5 mb-5 page-header">
-    <div class="container py-5">
-        <div class="row justify-content-center">
-            <div class="col-lg-10 text-center">
-                <h1 class="display-3 text-white animated slideInDown">Pengaturan Ujian</h1>
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb justify-content-center">
-                        <li class="breadcrumb-item"><a class="text-white" href="<?= base_url() ?>">Beranda</a></li>
-                        <li class="breadcrumb-item"><a class="text-white" href="<?= site_url('pengaturanujian') ?>">Pengaturan Ujian</a></li>
-                        <li class="breadcrumb-item text-white active" aria-current="page">Ujian</li>
-                    </ol>
-                </nav>
+    <!-- Header Start -->
+    <div class="container-fluid bg-primary py-5 mb-5 page-header">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <h1 class="display-3 text-white animated slideInDown">Pengaturan Ujian</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a class="text-white" href="<?= base_url() ?>">Beranda</a></li>
+                            <li class="breadcrumb-item"><a class="text-white" href="<?= site_url('pengaturanujian') ?>">Pengaturan Ujian</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Ujian</li>
+                        </ol>
+                    </nav>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<!-- Header End -->
+    <!-- Header End -->
 
 
     <div class="container py-5">
@@ -192,28 +196,28 @@
                     </tr>
                 </thead>
                 <tbody>
-                <?php if (empty($pengaturan)): ?>
-                    <tr>
-                        <td colspan="6" class="text-center text-muted">Belum ada data pengaturan.</td>
-                    </tr>
-                <?php else: ?>
-                    <?php foreach ($pengaturan as $p): ?>
+                    <?php if (empty($pengaturan)): ?>
                         <tr>
-                            <td><?= $p['id_pengaturan'] ?></td>
-                            <td><?= esc($p['nama_ujian']) ?></td>
-                            <td><?= $p['waktu'] ?> menit</td>
-                            <td><?= $p['jumlah_soal'] ?></td>
-                            <td class="text-center">
-                                <a href="<?= site_url('pengaturanujian/edit/' . $p['id_pengaturan']) ?>" class="btn btn-warning btn-sm me-1">
-                                    <i class="ti-pencil"></i> Edit
-                                </a>
-                                <a href="<?= site_url('pengaturanujian/delete/' . $p['id_pengaturan']) ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin menghapus pengaturan ini?')">
-                                    <i class="ti-trash"></i> Hapus
-                                </a>
-                            </td>
+                            <td colspan="6" class="text-center text-muted">Belum ada data pengaturan.</td>
                         </tr>
-                    <?php endforeach; ?>
-                <?php endif; ?>
+                    <?php else: ?>
+                        <?php foreach ($pengaturan as $p): ?>
+                            <tr>
+                                <td><?= $p['id_pengaturan'] ?></td>
+                                <td><?= esc($p['nama_ujian']) ?></td>
+                                <td><?= $p['waktu'] ?> menit</td>
+                                <td><?= $p['jumlah_soal'] ?></td>
+                                <td class="text-center">
+                                    <a href="<?= site_url('pengaturanujian/edit/' . $p['id_pengaturan']) ?>" class="btn btn-warning btn-sm me-1">
+                                        <i class="ti-pencil"></i> Edit
+                                    </a>
+                                    <a href="<?= site_url('pengaturanujian/delete/' . $p['id_pengaturan']) ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin menghapus pengaturan ini?')">
+                                        <i class="ti-trash"></i> Hapus
+                                    </a>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                    <?php endif; ?>
                 </tbody>
             </table>
         </div>
@@ -222,7 +226,7 @@
 
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+    <!-- <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-4 col-md-6">
@@ -244,7 +248,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Footer End -->
 
     <!-- Back to Top -->
@@ -258,7 +262,7 @@
     <script src="<?= base_url('brem/lib/waypoints/waypoints.min.js') ?>"></script>
     <script src="<?= base_url('brem/lib/owlcarousel/owl.carousel.min.js') ?>"></script>
 
-    
+
     <!-- Template Javascript -->
     <script src="<?= base_url('brem/js/main.js') ?>"></script>
 
@@ -280,11 +284,11 @@
             });
     </script>
     <script>
-    window.setTimeout(function(){
-        $('.alert').fadeTo(500, 0).slideUp(500, function(){
-        $(this).remove();
-        });
-    },1500);
+        window.setTimeout(function() {
+            $('.alert').fadeTo(500, 0).slideUp(500, function() {
+                $(this).remove();
+            });
+        }, 1500);
     </script>
 </body>
 

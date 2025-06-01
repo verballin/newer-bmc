@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8" />
-    <title>BMC : Laporan Penjualan</title>
+    <title>Laporan Penjualan</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
     <!-- Favicon -->
-    <link href="<?= base_url('brem/img/icon bmc.png') ?>" rel="icon" />
+    <!-- <link href="<?= base_url('brem/img/icon bmc.png') ?>" rel="icon" /> -->
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -28,57 +29,58 @@
     <link href="<?= base_url('brem/css/style.css') ?>" rel="stylesheet" />
 
     <style>
-    @media print {
-        /* Sembunyikan semua elemen yang bukan laporan */
-        body * {
-            visibility: hidden;
-        }
+        @media print {
 
-        /* Tampilkan hanya laporan */
-        .laporan-container,
-        .laporan-container * {
-            visibility: visible;
-        }
+            /* Sembunyikan semua elemen yang bukan laporan */
+            body * {
+                visibility: hidden;
+            }
 
-        /* Posisikan laporan agar cetak full page */
-        .laporan-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background: white;
-            color: black;
-            padding: 20px;
-        }
+            /* Tampilkan hanya laporan */
+            .laporan-container,
+            .laporan-container * {
+                visibility: visible;
+            }
 
-        /* Sembunyikan elemen yang tidak perlu */
-        #cetakBtn,
-        .navbar,
-        .page-header,
-        .breadcrumb,
-        .footer,
-        .back-to-top {
-            display: none !important;
-        }
+            /* Posisikan laporan agar cetak full page */
+            .laporan-container {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                background: white;
+                color: black;
+                padding: 20px;
+            }
 
-        /* Tabel agar rapi dan tidak kolom tunggal */
-        .laporan-container table {
-            width: 100%;
-            border-collapse: collapse;
-        }
+            /* Sembunyikan elemen yang tidak perlu */
+            #cetakBtn,
+            .navbar,
+            .page-header,
+            .breadcrumb,
+            .footer,
+            .back-to-top {
+                display: none !important;
+            }
 
-        .laporan-container th,
-        .laporan-container td {
-            border: 1px solid #000;
-            padding: 8px;
-            text-align: left;
-        }
+            /* Tabel agar rapi dan tidak kolom tunggal */
+            .laporan-container table {
+                width: 100%;
+                border-collapse: collapse;
+            }
 
-        .laporan-container th {
-            background-color: #eee;
-            color: #000;
+            .laporan-container th,
+            .laporan-container td {
+                border: 1px solid #000;
+                padding: 8px;
+                text-align: left;
+            }
+
+            .laporan-container th {
+                background-color: #eee;
+                color: #000;
+            }
         }
-    }
     </style>
 
 
@@ -89,7 +91,7 @@
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
         <a href="<?= base_url() ?>" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
             <p class="m-0 fw-bold" style="font-size: 25px;">
-                <img src="<?= base_url('brem/img/icon bmc.png') ?>" alt="" height="50px">
+                <!-- <img src="<?= base_url('brem/img/icon bmc.png') ?>" alt="" height="50px"> -->
             </p>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -111,6 +113,7 @@
                                 <a href="<?= site_url('inputproduk') ?>" class="dropdown-item">Input Produk</a>
                                 <a href="<?= site_url('laporanpenjualan') ?>" class="dropdown-item">Laporan Penjualan</a>
                                 <a href="<?= site_url('laporankeuntungan') ?>" class="dropdown-item">Laporan Keuntungan</a>
+                                <a href="<?= site_url('laporan/user') ?>" class="dropdown-item">Laporan User</a>
                             <?php endif; ?>
                             <a href="<?= site_url('historipembelian') ?>" class="dropdown-item">Histori Pembelian</a>
                             <form action="<?= site_url('/logout') ?>" method="post">
@@ -126,7 +129,7 @@
                 <a href="<?= site_url('about') ?>" class="nav-item nav-link">Tentang</a>
                 <a href="<?= site_url('courses') ?>" class="nav-item nav-link">Kursus</a>
 
-                <?php if($isLoggedIn): ?>
+                <?php if ($isLoggedIn): ?>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-item nav-link" data-bs-toggle="dropdown">Simulasi</a>
                         <div class="dropdown-menu fade-down m-0">
@@ -134,8 +137,11 @@
                                 <a href="<?= site_url('infopengaturanujian') ?>" class="dropdown-item">Pengaturan Ujian</a>
                                 <a href="<?= site_url('tambahsoal') ?>" class="dropdown-item">Tambah Soal Ujian</a>
                                 <a href="<?= site_url('daftarsoal') ?>" class="dropdown-item">Lihat Daftar Soal Ujian</a>
+                                <a href="<?= site_url('laporan') ?>" class="dropdown-item">Lihat Laporan Nilai Ujian</a>
                             <?php endif; ?>
-                            <a href="<?= site_url('ujian') ?>" class="dropdown-item">Pilih Ujian</a>
+                            <?php if (session()->get('role') === 'Siswa') : ?>
+                                <a href="<?= site_url('ujian') ?>" class="dropdown-item">Pilih Ujian</a>
+                            <?php endif; ?>
                         </div>
                     </div>
                 <?php endif; ?>
@@ -166,12 +172,12 @@
 
     <div class="container mb-5 laporan-container">
         <div class="text-center mb-4">
-            <img src="<?= base_url('brem/img/icon bmc.png') ?>" alt="Logo BMC" style="height: 60px;">
+            <!-- <img src="<?= base_url('brem/img/icon bmc.png') ?>" alt="Logo BMC" style="height: 60px;"> -->
             <h2 class="fw-bold mt-2">Laporan Penjualan Produk Kursus</h2>
             <?php if (session()->get('role') === 'Admin'): ?>
-            <button id="cetakBtn" class="btn btn-primary" onclick="window.print()">
-                <i class="fa fa-print"></i> Cetak PDF
-            </button>
+                <button id="cetakBtn" class="btn btn-primary" onclick="window.print()">
+                    <i class="fa fa-print"></i> Cetak PDF
+                </button>
             <?php endif; ?>
         </div>
 
@@ -186,11 +192,11 @@
             </thead>
             <tbody>
                 <?php foreach ($laporan as $item): ?>
-                <tr>
-                    <td><?= esc($item['produk_nama']) ?></td>
-                    <td><?= esc($item['jumlah_paid']) ?></td>
-                    <td><?= esc($item['jumlah_pending']) ?></td>
-                </tr>
+                    <tr>
+                        <td><?= esc($item['produk_nama']) ?></td>
+                        <td><?= esc($item['jumlah_paid']) ?></td>
+                        <td><?= esc($item['jumlah_pending']) ?></td>
+                    </tr>
                 <?php endforeach; ?>
             </tbody>
         </table>
@@ -199,7 +205,7 @@
     </div>
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+    <!-- <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-4 col-md-6">
@@ -220,7 +226,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Footer End -->
 
     <!-- Back to Top -->
@@ -235,4 +241,5 @@
     <script src="<?= base_url('brem/lib/owlcarousel/owl.carousel.min.js') ?>"></script>
     <script src="<?= base_url('brem/js/main.js') ?>"></script>
 </body>
+
 </html>

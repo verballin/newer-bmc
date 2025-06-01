@@ -32,7 +32,7 @@
                 <th>Nama Ujian</th>
                 <th>Nilai</th>
                 <th>Status</th>
-                <!-- <th>Tanggal</th> -->
+                <th>Tanggal</th>
             </tr>
             <p><a href="<?= base_url('laporan/pdf') ?>" target="_blank">🖨️ Cetak PDF</a></p>
         </thead>
@@ -45,7 +45,7 @@
                     <td><?= esc($row->nama_ujian) ?></td>
                     <td><?= esc($row->nilai) ?></td>
                     <td><?= esc($row->status) ?></td>
-                    <!-- <td><?= esc($row->tanggal) ?></td> -->
+                    <td><?= esc($row->tanggal) ?></td>
                 </tr>
             <?php endforeach ?>
         </tbody>

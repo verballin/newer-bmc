@@ -24,6 +24,8 @@ $routes->get('pembayaran/deletepembelian/(:num)', 'Pembayaran::deletepembelian/$
 
 $routes->get('laporanpenjualan', 'Pembayaran::laporanPenjualan');
 $routes->get('laporankeuntungan', 'Pembayaran::laporanKeuntungan');
+$routes->get('/laporan/user', 'LaporanUserController::index');
+$routes->get('/laporan/user/pdf', 'LaporanUserController::cetakPdf');
 $routes->get('/laporan', 'LaporanNilai::index');
 $routes->get('/laporan/pdf', 'LaporanNilai::cetakPdf');
 

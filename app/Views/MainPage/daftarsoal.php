@@ -4,13 +4,13 @@
 <head>
     <meta charset="utf-8" />
     <meta name="google-translate-customization" content="9f841e7780177523-3214ceb76f765f38-gc38c6fe6f9d06436-c" />
-    <title>BMC : Daftar Soal</title>
+    <title>Daftar Soal</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="" name="keywords" />
     <meta content="" name="description" />
 
     <!-- Favicon -->
-    <link href="<?= base_url('brem/img/icon bmc.png') ?>" rel="icon" />
+    <!-- <link href="<?= base_url('brem/img/icon bmc.png') ?>" rel="icon" /> -->
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -76,87 +76,91 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
         <a href="index.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <p class="m-0 fw-bold" style="font-size: 25px;"><img src="brem/img/icon bmc.png" alt="" height="50px"><span
-                    style="color: #fb873f;"></span></p>
+            <!-- <p class="m-0 fw-bold" style="font-size: 25px;"><img src="brem/img/icon bmc.png" alt="" height="50px"><span
+                    style="color: #fb873f;"></span></p> -->
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-            <?php
-            $session=session();
-            $isLoggedIn = $session->get('login') === true;
-            ?>
-            <div class="nav-item dropdown">
-                <?php if ($isLoggedIn) { ?>
-                    <a href="#" class="nav-item nav-link" data-bs-toggle="dropdown"><i class="fa fa-user"></i></a>
-                    <div class="dropdown-menu fade-down m-0">
-                        <?php if (session()->get('role') === 'Admin') : ?>
-                        <a href="<?= site_url('kelolauser') ?>" class="dropdown-item">Kelola User</a>    
-                        <a href="<?= site_url('inputproduk') ?>" class="dropdown-item">Input Produk</a>   
-                        <a href="<?= site_url('laporanpenjualan') ?>" class="dropdown-item">Laporan Penjualan</a>
-                        <a href="<?= site_url('laporankeuntungan') ?>" class="dropdown-item">Laporan Keuntungan</a>
-                        <?php endif; ?>
-                        <a href="<?= site_url('historipembelian') ?>" class="dropdown-item">Histori Pembelian</a>
-                        <form action="<?= site_url('/logout') ?>" method="post" style="display: inline;">
-                        <button type="submit" class="dropdown-item">Logout</button>
-                        </form>
-                    </div>
-                <?php } else { ?>
-                    <a href="<?= site_url('login') ?>" class="nav-item nav-link"><i class="fa fa-user"></i></a>
-                <?php } ?>
-            </div>
+                <?php
+                $session = session();
+                $isLoggedIn = $session->get('login') === true;
+                ?>
+                <div class="nav-item dropdown">
+                    <?php if ($isLoggedIn) { ?>
+                        <a href="#" class="nav-item nav-link" data-bs-toggle="dropdown"><i class="fa fa-user"></i></a>
+                        <div class="dropdown-menu fade-down m-0">
+                            <?php if (session()->get('role') === 'Admin') : ?>
+                                <a href="<?= site_url('kelolauser') ?>" class="dropdown-item">Kelola User</a>
+                                <a href="<?= site_url('inputproduk') ?>" class="dropdown-item">Input Produk</a>
+                                <a href="<?= site_url('laporanpenjualan') ?>" class="dropdown-item">Laporan Penjualan</a>
+                                <a href="<?= site_url('laporankeuntungan') ?>" class="dropdown-item">Laporan Keuntungan</a>
+                                <a href="<?= site_url('laporan/user') ?>" class="dropdown-item">Laporan User</a>
+                            <?php endif; ?>
+                            <a href="<?= site_url('historipembelian') ?>" class="dropdown-item">Histori Pembelian</a>
+                            <form action="<?= site_url('/logout') ?>" method="post" style="display: inline;">
+                                <button type="submit" class="dropdown-item">Logout</button>
+                            </form>
+                        </div>
+                    <?php } else { ?>
+                        <a href="<?= site_url('login') ?>" class="nav-item nav-link"><i class="fa fa-user"></i></a>
+                    <?php } ?>
+                </div>
 
-                <a href="<?= base_url()?>" class="nav-item nav-link">Beranda</a>
+                <a href="<?= base_url() ?>" class="nav-item nav-link">Beranda</a>
                 <a href="<?= site_url('about') ?>" class="nav-item nav-link">Tentang</a>
                 <a href="<?= site_url('courses') ?>" class="nav-item nav-link">Kursus</a>
                 <div class="nav-item dropdown">
-                <?php if($isLoggedIn) { ?>
-                    <a href="#" class="nav-item nav-link" data-bs-toggle="dropdown">Simulasi</a>
+                    <?php if ($isLoggedIn) { ?>
+                        <a href="#" class="nav-item nav-link" data-bs-toggle="dropdown">Simulasi</a>
                         <div class="dropdown-menu fade-down m-0">
                             <?php if (session()->get('role') === 'Admin') : ?>
-                            <a href="<?= site_url('infopengaturanujian') ?>" class="dropdown-item">Pengaturan Ujian</a>
-                            <a href="<?= site_url('tambahsoal') ?>" class="dropdown-item">Tambah Soal Ujian</a>
-                            <a href="<?= site_url('daftarsoal') ?>" class="dropdown-item">Lihat Daftar Soal Ujian</a>
+                                <a href="<?= site_url('infopengaturanujian') ?>" class="dropdown-item">Pengaturan Ujian</a>
+                                <a href="<?= site_url('tambahsoal') ?>" class="dropdown-item">Tambah Soal Ujian</a>
+                                <a href="<?= site_url('daftarsoal') ?>" class="dropdown-item">Lihat Daftar Soal Ujian</a>
+                                <a href="<?= site_url('laporan') ?>" class="dropdown-item">Lihat Laporan Nilai Ujian</a>
                             <?php endif; ?>
-                            <a href="<?= site_url('ujian') ?>" class="dropdown-item">Pilih Ujian</a>   
+                            <?php if (session()->get('role') === 'Siswa') : ?>
+                                <a href="<?= site_url('ujian') ?>" class="dropdown-item">Pilih Ujian</a>
+                            <?php endif; ?>
                         </div>
                     <?php } ?>
                 </div>
                 <a href="<?= site_url('contact') ?>" class="nav-item nav-link">Kontak</a>
-     
-                </div>
-                
 
-                <div id="google_translate_element">
-                </div>
-
-
-                </a>
             </div>
+
+
+            <div id="google_translate_element">
+            </div>
+
+
+            </a>
+        </div>
         </div>
     </nav>
     <!-- Navbar End -->
 
-<!-- Header Start -->
-<div class="container-fluid bg-primary py-5 mb-5 page-header">
-    <div class="container py-5">
-        <div class="row justify-content-center">
-            <div class="col-lg-10 text-center">
-                <h1 class="display-3 text-white animated slideInDown">Daftar Soal</h1>
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb justify-content-center">
-                        <li class="breadcrumb-item"><a class="text-white" href="<?= base_url() ?>">Beranda</a></li>
-                        <li class="breadcrumb-item"><a class="text-white" href="<?= site_url('daftarsoal') ?>">Daftar Soal</a></li>
-                        <li class="breadcrumb-item text-white active" aria-current="page">Ujian</li>
-                    </ol>
-                </nav>
+    <!-- Header Start -->
+    <div class="container-fluid bg-primary py-5 mb-5 page-header">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <h1 class="display-3 text-white animated slideInDown">Daftar Soal</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a class="text-white" href="<?= base_url() ?>">Beranda</a></li>
+                            <li class="breadcrumb-item"><a class="text-white" href="<?= site_url('daftarsoal') ?>">Daftar Soal</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Ujian</li>
+                        </ol>
+                    </nav>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<!-- Header End -->
+    <!-- Header End -->
 
 
     <?php if (session()->getFlashdata('pesan')) : ?>
@@ -164,7 +168,7 @@
             <?= session()->getFlashdata('pesan') ?>
         </div>
     <?php endif; ?>
-   
+
 
     <div class="container py-5">
 
@@ -193,75 +197,75 @@
                     </tr>
                 </thead>
                 <tbody>
-                <?php if (empty($soal)): ?>
-                    <tr>
-                        <td colspan="5" class="text-center text-muted">Belum ada soal.</td>
-                    </tr>
-                <?php else: ?>
-                    <?php foreach ($soal as $s): ?>
+                    <?php if (empty($soal)): ?>
                         <tr>
-                            <td><?= $s['soal_id'] ?></td>
-                            <td><?= esc(strip_tags($s['pertanyaan'])) ?></td>
-                            <td><?= strtoupper($s['kunci_jawaban']) ?></td>
-                            <td>
-                                <?php if (!empty($s['gambar'])): ?>
-                                    <img src="<?= base_url('uploads/soal/' . $s['gambar']) ?>" width="100" class="img-thumbnail">
-                                <?php else: ?>
-                                    <span class="text-muted">-</span>
-                                <?php endif; ?>
-                            </td>
-                            <td class="text-center">
-                            <!-- Tombol Preview -->
-                            <button class="btn btn-info btn-sm me-1" data-bs-toggle="modal" data-bs-target="#previewModal<?= $s['soal_id'] ?>">
-                                <i class="ti-eye"></i> Preview
-                            </button>
-
-                            <!-- Tombol Edit -->
-                            <a href="<?= site_url('soal/edit/' . $s['soal_id']) ?>" class="btn btn-warning btn-sm me-1">
-                                <i class="ti-pencil"></i> Edit
-                            </a>
-
-                            <!-- Tombol Hapus -->
-                            <a href="<?= site_url('soal/delete/' . $s['soal_id']) ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin menghapus?')">
-                                <i class="ti-trash"></i> Hapus
-                            </a>
-                            </td>
+                            <td colspan="5" class="text-center text-muted">Belum ada soal.</td>
                         </tr>
-                    <?php endforeach; ?>
-                <?php endif; ?>
+                    <?php else: ?>
+                        <?php foreach ($soal as $s): ?>
+                            <tr>
+                                <td><?= $s['soal_id'] ?></td>
+                                <td><?= esc(strip_tags($s['pertanyaan'])) ?></td>
+                                <td><?= strtoupper($s['kunci_jawaban']) ?></td>
+                                <td>
+                                    <?php if (!empty($s['gambar'])): ?>
+                                        <img src="<?= base_url('uploads/soal/' . $s['gambar']) ?>" width="100" class="img-thumbnail">
+                                    <?php else: ?>
+                                        <span class="text-muted">-</span>
+                                    <?php endif; ?>
+                                </td>
+                                <td class="text-center">
+                                    <!-- Tombol Preview -->
+                                    <button class="btn btn-info btn-sm me-1" data-bs-toggle="modal" data-bs-target="#previewModal<?= $s['soal_id'] ?>">
+                                        <i class="ti-eye"></i> Preview
+                                    </button>
+
+                                    <!-- Tombol Edit -->
+                                    <a href="<?= site_url('soal/edit/' . $s['soal_id']) ?>" class="btn btn-warning btn-sm me-1">
+                                        <i class="ti-pencil"></i> Edit
+                                    </a>
+
+                                    <!-- Tombol Hapus -->
+                                    <a href="<?= site_url('soal/delete/' . $s['soal_id']) ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin menghapus?')">
+                                        <i class="ti-trash"></i> Hapus
+                                    </a>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                    <?php endif; ?>
                 </tbody>
             </table>
             <?php foreach ($soal as $s): ?>
                 <!-- Modal Preview Soal -->
                 <div class="modal fade" id="previewModal<?= $s['soal_id'] ?>" tabindex="-1" aria-labelledby="previewModalLabel<?= $s['soal_id'] ?>" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                        <h5 class="modal-title" id="previewModalLabel<?= $s['soal_id'] ?>">Preview Soal #<?= $s['soal_id'] ?></h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
-                        </div>
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="previewModalLabel<?= $s['soal_id'] ?>">Preview Soal #<?= $s['soal_id'] ?></h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+                            </div>
                             <div class="modal-body">
                                 <p><strong>Pertanyaan:</strong></p>
                                 <?php if (!empty($s['gambar'])): ?>
-                                <img src="<?= base_url('uploads/soal/' . $s['gambar']) ?>" class="img-fluid w-25 img-thumbnail mb-3">
+                                    <img src="<?= base_url('uploads/soal/' . $s['gambar']) ?>" class="img-fluid w-25 img-thumbnail mb-3">
                                 <?php endif; ?>
 
                                 <div><?= $s['pertanyaan'] ?></div>
-                                
+
                                 <hr>
 
                                 <p><strong>Opsi Jawaban:</strong></p>
                                 <ul>
-                                <li><strong>A.</strong> <?= $s['a'] ?></li>
-                                <li><strong>B.</strong> <?= $s['b'] ?></li>
-                                <li><strong>C.</strong> <?= $s['c'] ?></li>
-                                <li><strong>D.</strong> <?= $s['d'] ?></li>
+                                    <li><strong>A.</strong> <?= $s['a'] ?></li>
+                                    <li><strong>B.</strong> <?= $s['b'] ?></li>
+                                    <li><strong>C.</strong> <?= $s['c'] ?></li>
+                                    <li><strong>D.</strong> <?= $s['d'] ?></li>
                                 </ul>
                                 <hr>
                                 <p><strong>Kunci Jawaban:</strong> <?= strtoupper($s['kunci_jawaban']) ?></p>
                             </div>
+                        </div>
                     </div>
-                </div>
                 </div>
             <?php endforeach; ?>
 
@@ -272,7 +276,7 @@
 
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+    <!-- <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-4 col-md-6">
@@ -294,7 +298,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Footer End -->
 
     <!-- Back to Top -->
@@ -308,7 +312,7 @@
     <script src="<?= base_url('brem/lib/waypoints/waypoints.min.js') ?>"></script>
     <script src="<?= base_url('brem/lib/owlcarousel/owl.carousel.min.js') ?>"></script>
 
-    
+
     <!-- Template Javascript -->
     <script src="<?= base_url('brem/js/main.js') ?>"></script>
 
@@ -316,11 +320,11 @@
     <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
 
     <script>
-    window.setTimeout(function(){
-        $('.alert').fadeTo(500, 0).slideUp(500, function(){
-        $(this).remove();
-        });
-    },1500);
+        window.setTimeout(function() {
+            $('.alert').fadeTo(500, 0).slideUp(500, function() {
+                $(this).remove();
+            });
+        }, 1500);
     </script>
 </body>
 

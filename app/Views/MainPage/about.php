@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="utf-8">
-    <title>BMC : Tentang Kami</title>
+    <title>Tentang Kami</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="<?= base_url('brem/img/icon bmc.png') ?>" rel="icon">
+    <!-- <link href="<?= base_url('brem/img/icon bmc.png') ?>" rel="icon"> -->
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,65 +46,69 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
         <a href="index.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <p class="m-0 fw-bold" style="font-size: 25px;"><img src="brem/img/icon bmc.png" alt="" height="50px"><span
-                    style="color: #fb873f;"></span></p>
+            <!-- <p class="m-0 fw-bold" style="font-size: 25px;"><img src="brem/img/icon bmc.png" alt="" height="50px"><span
+                    style="color: #fb873f;"></span></p> -->
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-            <?php
-            $session=session();
-            $isLoggedIn = $session->get('login') === true;
-            ?>
-            <div class="nav-item dropdown">
-                <?php if ($isLoggedIn) { ?>
-                    <a href="#" class="nav-item nav-link" data-bs-toggle="dropdown"><i class="fa fa-user"></i></a>
-                    <div class="dropdown-menu fade-down m-0">
-                        <?php if (session()->get('role') === 'Admin') : ?>
-                        <a href="<?= site_url('kelolauser') ?>" class="dropdown-item">Kelola User</a>    
-                        <a href="<?= site_url('inputproduk') ?>" class="dropdown-item">Input Produk</a>   
-                        <a href="<?= site_url('laporanpenjualan') ?>" class="dropdown-item">Laporan Penjualan</a>
-                        <a href="<?= site_url('laporankeuntungan') ?>" class="dropdown-item">Laporan Keuntungan</a>
-                        <?php endif; ?>
-                        <a href="<?= site_url('historipembelian') ?>" class="dropdown-item">Histori Pembelian</a>
-                        <form action="<?= site_url('/logout') ?>" method="post" style="display: inline;">
-                        <button type="submit" class="dropdown-item">Logout</button>
-                        </form>
-                    </div>
-                <?php } else { ?>
-                    <a href="<?= site_url('login') ?>" class="nav-item nav-link"><i class="fa fa-user"></i></a>
-                <?php } ?>
-            </div>
+                <?php
+                $session = session();
+                $isLoggedIn = $session->get('login') === true;
+                ?>
+                <div class="nav-item dropdown">
+                    <?php if ($isLoggedIn) { ?>
+                        <a href="#" class="nav-item nav-link" data-bs-toggle="dropdown"><i class="fa fa-user"></i></a>
+                        <div class="dropdown-menu fade-down m-0">
+                            <?php if (session()->get('role') === 'Admin') : ?>
+                                <a href="<?= site_url('kelolauser') ?>" class="dropdown-item">Kelola User</a>
+                                <a href="<?= site_url('inputproduk') ?>" class="dropdown-item">Input Produk</a>
+                                <a href="<?= site_url('laporanpenjualan') ?>" class="dropdown-item">Laporan Penjualan</a>
+                                <a href="<?= site_url('laporankeuntungan') ?>" class="dropdown-item">Laporan Keuntungan</a>
+                                <a href="<?= site_url('laporan/user') ?>" class="dropdown-item">Laporan User</a>
+                            <?php endif; ?>
+                            <a href="<?= site_url('historipembelian') ?>" class="dropdown-item">Histori Pembelian</a>
+                            <form action="<?= site_url('/logout') ?>" method="post" style="display: inline;">
+                                <button type="submit" class="dropdown-item">Logout</button>
+                            </form>
+                        </div>
+                    <?php } else { ?>
+                        <a href="<?= site_url('login') ?>" class="nav-item nav-link"><i class="fa fa-user"></i></a>
+                    <?php } ?>
+                </div>
 
-                <a href="<?= base_url()?>" class="nav-item nav-link">Beranda</a>
+                <a href="<?= base_url() ?>" class="nav-item nav-link">Beranda</a>
                 <a href="<?= site_url('about') ?>" class="nav-item nav-link">Tentang</a>
                 <a href="<?= site_url('courses') ?>" class="nav-item nav-link">Kursus</a>
                 <div class="nav-item dropdown">
-                <?php if($isLoggedIn) { ?>
-                    <a href="#" class="nav-item nav-link" data-bs-toggle="dropdown">Simulasi</a>
+                    <?php if ($isLoggedIn) { ?>
+                        <a href="#" class="nav-item nav-link" data-bs-toggle="dropdown">Simulasi</a>
                         <div class="dropdown-menu fade-down m-0">
                             <?php if (session()->get('role') === 'Admin') : ?>
-                            <a href="<?= site_url('infopengaturanujian') ?>" class="dropdown-item">Pengaturan Ujian</a>
-                            <a href="<?= site_url('tambahsoal') ?>" class="dropdown-item">Tambah Soal Ujian</a>
-                            <a href="<?= site_url('daftarsoal') ?>" class="dropdown-item">Lihat Daftar Soal Ujian</a>
+                                <a href="<?= site_url('infopengaturanujian') ?>" class="dropdown-item">Pengaturan Ujian</a>
+                                <a href="<?= site_url('tambahsoal') ?>" class="dropdown-item">Tambah Soal Ujian</a>
+                                <a href="<?= site_url('daftarsoal') ?>" class="dropdown-item">Lihat Daftar Soal Ujian</a>
+                                <a href="<?= site_url('laporan') ?>" class="dropdown-item">Lihat Laporan Nilai Ujian</a>
                             <?php endif; ?>
-                            <a href="<?= site_url('ujian') ?>" class="dropdown-item">Pilih Ujian</a>   
+                            <?php if (session()->get('role') === 'Siswa') : ?>
+                                <a href="<?= site_url('ujian') ?>" class="dropdown-item">Pilih Ujian</a>
+                            <?php endif; ?>
                         </div>
                     <?php } ?>
                 </div>
                 <a href="<?= site_url('contact') ?>" class="nav-item nav-link">Kontak</a>
-     
-                </div>
-                
 
-                <div id="google_translate_element">
-                </div>
-
-
-                </a>
             </div>
+
+
+            <div id="google_translate_element">
+            </div>
+
+
+            </a>
+        </div>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -134,12 +138,12 @@
 
                 <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.3s">
                     <h6 class="section-title bg-white text-start pe-3">Tentang Kami</h6>
-                    <h1 class="mb-4" style="color: #fb873f;">Visi dan Misi Bimbel Mora College</h1>
+                    <h1 class="mb-4" style="color: #fb873f;">Visi dan Misi Bimbel</h1>
                     <p class="mb-4">
                         Menjadi lembaga bimbingan belajar terdepan yang mencetak generasi unggul, berprestasi, dan berkarakter
                         melalui pembelajaran yang inovatif, inspiratif, dan berdaya saing global.
                     </p>
-                    
+
                     <h3 class="mb-3">Misi</h3>
                     <ul class="mb-4">
                         <li class="mb-2">Menyediakan layanan pendidikan berkualitas dengan pendekatan personal dan metode belajar yang efektif, menyenangkan, serta adaptif terhadap kebutuhan siswa.</li>
@@ -157,7 +161,7 @@
     <!-- About End -->
 
 
-    <!-- Footer Start -->
+    <!-- Footer Start
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
@@ -170,17 +174,17 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <h4 class="text-white mb-3">Kontak</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i> Jalan Farrel Pasaribu, Simpang GG. Rambutan Daerah, Jl. Lapangan Sepak Bola, Kec. Siantar Marihat, Kota Pematang Siantar, Sumatera Utara 21121</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>0821-6329-9216</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>kursuonline.moracollege@gmail.com</p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i></p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i></p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i></p>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href="https://x.com/CollegeMora"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/moracollege/"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Footer End -->
 
 

@@ -6,13 +6,13 @@
     <meta name="google-translate-customization" content="9f841e7780177523-3214ceb76f765f38-gc38c6fe6f9d06436-c">
     </meta>
 
-    <title>Bimbel Mora College</title>
+    <title>Bimbel</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="brem/img/icon bmc.png" rel="icon">
+    <!-- <link href="brem/img/icon bmc.png" rel="icon"> -->
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -51,8 +51,8 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
         <a href="index.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <p class="m-0 fw-bold" style="font-size: 25px;"><img src="brem/img/icon bmc.png" alt="" height="50px"><span
-                    style="color: #fb873f;"></span></p>
+            <!-- <p class="m-0 fw-bold" style="font-size: 25px;"><img src="brem/img/icon bmc.png" alt="" height="50px"><span
+                    style="color: #fb873f;"></span></p> -->
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -72,7 +72,8 @@
                                 <a href="<?= site_url('inputproduk') ?>" class="dropdown-item">Input Produk</a>
                                 <a href="<?= site_url('laporanpenjualan') ?>" class="dropdown-item">Laporan Penjualan</a>
                                 <a href="<?= site_url('laporankeuntungan') ?>" class="dropdown-item">Laporan Keuntungan</a>
-                                <a href="<?= site_url('laporanuser') ?>" class="dropdown-item">Laporan User</a>
+                                <a href="<?= site_url('laporan/user') ?>" class="dropdown-item">Laporan User</a>
+
                             <?php endif; ?>
                             <a href="<?= site_url('historipembelian') ?>" class="dropdown-item">Histori Pembelian</a>
                             <form action="<?= site_url('/logout') ?>" method="post" style="display: inline;">
@@ -95,10 +96,11 @@
                                 <a href="<?= site_url('infopengaturanujian') ?>" class="dropdown-item">Pengaturan Ujian</a>
                                 <a href="<?= site_url('tambahsoal') ?>" class="dropdown-item">Tambah Soal Ujian</a>
                                 <a href="<?= site_url('daftarsoal') ?>" class="dropdown-item">Lihat Daftar Soal Ujian</a>
+                                <a href="<?= site_url('laporan') ?>" class="dropdown-item">Lihat Laporan Nilai Ujian</a>
                             <?php endif; ?>
-                            <a href="<?= site_url('ujian') ?>" class="dropdown-item">Pilih Ujian</a>
-                            <a href="<?= site_url('laporan') ?>" class="dropdown-item">Lihat Laporan Nilai Ujian</a>
-                            <!-- <a href="<?= site_url('historinilai') ?>" class="dropdown-item">Histori Nilai</a> -->
+                            <?php if (session()->get('role') === 'Siswa') : ?>
+                                <a href="<?= site_url('ujian') ?>" class="dropdown-item">Pilih Ujian</a>
+                            <?php endif; ?>
                         </div>
                     <?php } ?>
                 </div>
@@ -131,7 +133,7 @@
                                 <div class="col-sm-10 col-lg-8">
                                     <h5 class=" text-uppercase mb-3 animated slideInDown" style="color: #fb873f;">Best
                                         Platform pembelajaran elektronik terbaik</h5>
-                                    <h1 class="display-3 text-white animated slideInDown">Bimbingan Belajar di Mora College: Terbukti Sukses dalam Ujian CPNS & Akademik.</h1>
+                                    <h1 class="display-3 text-white animated slideInDown">Bimbingan Belajar di Bimbel : Terbukti Sukses dalam Ujian CPNS & Akademik.</h1>
                                     <p class=" text-white mb-4 pb-2">Jelajahi berbagai kursus yang dirancang untuk meningkatkan keahlian Anda dalam teknologi, bisnis, seni, dan banyak lagi. Mulailah belajar hari ini!</p>
                                     <a href="<?= site_url('about') ?>"
                                         class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Baca selengkapnya</a>
@@ -149,7 +151,7 @@
                         <div class="container">
                             <div class="row justify-content-start">
                                 <div class="col-sm-10 col-lg-8">
-                                    <h5 class=" text-uppercase mb-3 animated slideInDown" style="color: #fb873f;">Selamat Datang di Bimbel Mora College</h5>
+                                    <h5 class=" text-uppercase mb-3 animated slideInDown" style="color: #fb873f;">Selamat Datang di Bimbel</h5>
                                     <h1 class="display-3 text-white animated slideInDown">Panduan ahli untuk masa depan cerah!
                                     </h1>
                                     <p class=" text-white mb-4 pb-2">Ikuti pelajaran interaktif, kuis, dan proyek. Rasakan pembelajaran langsung yang membuat Anda termotivasi dan terinspirasi.</p>
@@ -171,8 +173,8 @@
         <div class="container">
             <div class="row g-2 text-center">
                 <div class="col-12 wow fadeInUp" data-wow-delay="0.3s">
-                    <h1 style="color: #fb873f;">Investasikan dalam tujuan profesional Anda bersama BMC</h1>
-                    <p class="mb-5">Dapatkan akses tak terbatas ke lebih dari 90% kursus, Proyek, Spesialisasi, dan Sertifikat Profesional di BMC, yang diajarkan oleh instruktur top.</p>
+                    <h1 style="color: #fb873f;">Investasikan dalam tujuan profesional Anda bersama Bimbel ini</h1>
+                    <p class="mb-5">Dapatkan akses tak terbatas ke lebih dari 90% kursus, Proyek, Spesialisasi, dan Sertifikat Profesional di Bimbel ini, yang diajarkan oleh instruktur top.</p>
                 </div>
             </div>
             <div class="row g-4">
@@ -231,11 +233,11 @@
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                     <h6 class="section-title bg-white text-start pe-3">Tentang Kami</h6>
-                    <h1 class="mb-4" style="color: #fb873f;">Selamat Datang di BMC</h1>
-                    <p class="mb-4">Di BMC, kami percaya pada pengalaman belajar yang mudah diakses dan inovatif
+                    <h1 class="mb-4" style="color: #fb873f;">Selamat Datang di Bimbel</h1>
+                    <p class="mb-4">Di Bimbel, kami percaya pada pengalaman belajar yang mudah diakses dan inovatif
                         yang menyesuaikan dengan jadwal serta gaya belajar Anda. Bergabunglah bersama kami dalam merangkul
                         masa depan pendidikan dan buka potensi Anda melalui kursus online yang mendalam.</p>
-                    <p class="mb-4"> Selamat datang di BMC, gerbang Anda menuju peluang belajar tanpa batas. Kami
+                    <p class="mb-4"> Selamat datang di Bimbel, gerbang Anda menuju peluang belajar tanpa batas. Kami
                         berdedikasi untuk mendemokratisasi pendidikan, menawarkan beragam kursus yang diajarkan oleh para
                         ahli industri. Misi kami adalah memberdayakan pelajar di seluruh dunia, membangun platform berbasis
                         komunitas di mana pengetahuan tidak mengenal batas.</p>
@@ -276,7 +278,7 @@
                 <div class="col-lg-6 p-5 wow fadeInUp" data-wow-delay="0.3s">
 
                     <h1 class="mb-4" style="color: #fb873f;">Jelajahi Kursus Gratis</h1>
-                    <p class="mb-4">Mulailah perjalanan belajar onlinemu di Great Learning Academy secara gratis dengan kursus dasar jangka pendek di berbagai bidang yang banyak diminati.</p>
+                    <p class="mb-4">Mulailah perjalanan belajar onlinemu di Bimbel secara gratis dengan kursus dasar jangka pendek di berbagai bidang yang banyak diminati.</p>
 
                     <a class="btn text-light py-3 px-5 mt-2" href="<?= site_url('signup') ?>">Mulai Gratis</a>
                 </div>
@@ -298,7 +300,7 @@
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="section-title bg-white text-center px-3">Jelajahi Kursus Gratis</h6>
-                <h1 class="mb-5" style="color: #fb873f;">Mulailah perjalanan belajar onlinemu di BMC Mora College secara gratis dengan kursus dasar jangka pendek di berbagai bidang yang banyak diminati.</h1>
+                <h1 class="mb-5" style="color: #fb873f;">Mulailah perjalanan belajar onlinemu di Bimbel secara gratis dengan kursus dasar jangka pendek di berbagai bidang yang banyak diminati.</h1>
                 <a class="btn text-light py-3 px-5 mt-2" href="<?= site_url('signup') ?>">Mulai Gratis</a>
             </div>
         </div>
@@ -320,24 +322,24 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Apa itu BMC?
+                                    Apa itu Bimbel?
                                 </button>
                             </h2>
                             <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    BMC adalah sebuah inisiatif yang menawarkan kursus online terbaik dalam teknologi terkini dan telah berhasil mendaftarkan lebih dari 100+ pelajar di berbagai bidang. BMC mencakup kursus CPNS, TOEFL, SNBT, Psikotes, dan masih banyak lagi!
+                                    Bimbel adalah sebuah inisiatif yang menawarkan kursus online terbaik dalam teknologi terkini dan telah berhasil mendaftarkan lebih dari 100+ pelajar di berbagai bidang. Bimbel mencakup kursus CPNS, TOEFL, SNBT, Psikotes, dan masih banyak lagi!
                                 </div>
                             </div>
                         </div>
                         <div class="accordion-item">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Mengapa saya harus memilih BMC untuk kursus gratis bersertifikat?
+                                    Mengapa saya harus memilih Bimbel untuk kursus gratis bersertifikat?
                                 </button>
                             </h2>
                             <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    BMC adalah pilihan yang sangat baik untuk kursus dengan sertifikat karena kualitas konten pembelajarannya yang tinggi. Kursus-kursus tersebut dirancang dengan baik, menawarkan pengalaman belajar yang luar biasa, serta interaktif dan menarik, sehingga sangat cocok bagi pelajar dalam menentukan jalur karier mereka.
+                                    Bimbel adalah pilihan yang sangat baik untuk kursus dengan sertifikat karena kualitas konten pembelajarannya yang tinggi. Kursus-kursus tersebut dirancang dengan baik, menawarkan pengalaman belajar yang luar biasa, serta interaktif dan menarik, sehingga sangat cocok bagi pelajar dalam menentukan jalur karier mereka.
                                 </div>
                             </div>
                         </div>
@@ -349,7 +351,7 @@
                             </h2>
                             <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    Anda dapat mengikuti beberapa kursus secara bersamaan di BMC.
+                                    Anda dapat mengikuti beberapa kursus secara bersamaan di Bimbel.
                                 </div>
                             </div>
                         </div>
@@ -368,14 +370,14 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                    Apa saja kursus paling populer yang ditawarkan oleh BMC?
+                                    Apa saja kursus paling populer yang ditawarkan oleh Bimbel?
                                 </button>
                             </h2>
                             <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    BMC berfokus pada konsep dan keterampilan yang paling diminati, membantu pelajar mengembangkan pengetahuan yang relevan dengan industri pilihan mereka.
+                                    Bimbel berfokus pada konsep dan keterampilan yang paling diminati, membantu pelajar mengembangkan pengetahuan yang relevan dengan industri pilihan mereka.
 
-                                    <p>Beberapa kursus gratis paling populer dari BMC yang banyak diminati saat ini antara lain:</p>
+                                    <p>Beberapa kursus gratis paling populer dari Bimbel yang banyak diminati saat ini antara lain:</p>
                                     <ul>
                                         <li>Kursus CPNS</li>
                                         <li>Kursus TOEFL</li>
@@ -393,7 +395,7 @@
     <!-- FAQ End  -->
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+    <!-- <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-4 col-md-6">
@@ -415,7 +417,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Footer End -->
 
     <!-- Back to Top -->

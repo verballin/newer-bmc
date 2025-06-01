@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Instruksi Pembayaran</title>
     <link rel="stylesheet" href="<?= base_url('brem/css/bootstrap.min.css') ?>">
     <link rel="stylesheet" href="<?= base_url('brem/css/style.css') ?>">
 </head>
+
 <body>
     <div class="container py-5">
         <div class="card shadow-lg p-4">
@@ -14,9 +16,9 @@
             <p><strong>Email:</strong> <?= esc($pembayaran['email']) ?></p>
             <p><strong>Produk:</strong> <?= esc($produk['title']) ?></p>
             <?php
-                            // Ambil angka dari string seperti "IDR 500000"
-                            $hargaBersih = preg_replace('/[^\d]/', '', $produk['harga']);
-                            $hargaAngka = (int) $hargaBersih;
+            // Ambil angka dari string seperti "IDR 500000"
+            $hargaBersih = preg_replace('/[^\d]/', '', $produk['harga']);
+            $hargaAngka = (int) $hargaBersih;
             ?>
             <p><strong>Harga:</strong>Rp. <?= number_format($hargaAngka, 0, ',', '.') ?></p>
             <p><strong>Metode Pembayaran:</strong> <?= esc(ucfirst($pembayaran['metode_pembayaran'])) ?></p>
@@ -29,7 +31,7 @@
                 <ul>
                     <li><strong>Bank:</strong> BCA</li>
                     <li><strong>No. Rekening:</strong> -</li>
-                    <li><strong>Atas Nama:</strong> BMC Education</li>
+                    <li><strong>Atas Nama:</strong> Bimbel Education</li>
                 </ul>
             <?php elseif ($pembayaran['metode_pembayaran'] == 'dana') : ?>
                 <h5>Transfer Pembayaran ke link Dana berikut untuk membayar:</h5>
@@ -39,9 +41,10 @@
             <p class="mt-4">Setelah pembayaran, silakan hubungi admin atau unggah bukti pembayaran melalui WA : 0821-6329-9216.</p>
 
             <div class="text-center mt-4">
-                <a href="<?= base_url()?>" class="btn btn-primary">Kembali ke Home</a>
+                <a href="<?= base_url() ?>" class="btn btn-primary">Kembali ke Home</a>
             </div>
         </div>
     </div>
 </body>
+
 </html>

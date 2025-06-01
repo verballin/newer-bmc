@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="utf-8">
-    <title>BMC : Kontak</title>
+    <title>Kontak</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="<?= base_url('brem/img/icon bmc.png') ?>" rel="icon">
+    <!-- <link href="<?= base_url('brem/img/icon bmc.png') ?>" rel="icon"> -->
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,65 +46,69 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
         <a href="index.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <p class="m-0 fw-bold" style="font-size: 25px;"><img src="brem/img/icon bmc.png" alt="" height="50px"><span
-                    style="color: #fb873f;"></span></p>
+            <!-- <p class="m-0 fw-bold" style="font-size: 25px;"><img src="brem/img/icon bmc.png" alt="" height="50px"><span
+                    style="color: #fb873f;"></span></p> -->
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-            <?php
-            $session=session();
-            $isLoggedIn = $session->get('login') === true;
-            ?>
-            <div class="nav-item dropdown">
-                <?php if ($isLoggedIn) { ?>
-                    <a href="#" class="nav-item nav-link" data-bs-toggle="dropdown"><i class="fa fa-user"></i></a>
-                    <div class="dropdown-menu fade-down m-0">
-                        <?php if (session()->get('role') === 'Admin') : ?>
-                        <a href="<?= site_url('kelolauser') ?>" class="dropdown-item">Kelola User</a>    
-                        <a href="<?= site_url('inputproduk') ?>" class="dropdown-item">Input Produk</a>   
-                        <a href="<?= site_url('laporanpenjualan') ?>" class="dropdown-item">Laporan Penjualan</a>
-                        <a href="<?= site_url('laporankeuntungan') ?>" class="dropdown-item">Laporan Keuntungan</a>
-                        <?php endif; ?>
-                        <a href="<?= site_url('historipembelian') ?>" class="dropdown-item">Histori Pembelian</a>
-                        <form action="<?= site_url('/logout') ?>" method="post" style="display: inline;">
-                        <button type="submit" class="dropdown-item">Logout</button>
-                        </form>
-                    </div>
-                <?php } else { ?>
-                    <a href="<?= site_url('login') ?>" class="nav-item nav-link"><i class="fa fa-user"></i></a>
-                <?php } ?>
-            </div>
+                <?php
+                $session = session();
+                $isLoggedIn = $session->get('login') === true;
+                ?>
+                <div class="nav-item dropdown">
+                    <?php if ($isLoggedIn) { ?>
+                        <a href="#" class="nav-item nav-link" data-bs-toggle="dropdown"><i class="fa fa-user"></i></a>
+                        <div class="dropdown-menu fade-down m-0">
+                            <?php if (session()->get('role') === 'Admin') : ?>
+                                <a href="<?= site_url('kelolauser') ?>" class="dropdown-item">Kelola User</a>
+                                <a href="<?= site_url('inputproduk') ?>" class="dropdown-item">Input Produk</a>
+                                <a href="<?= site_url('laporanpenjualan') ?>" class="dropdown-item">Laporan Penjualan</a>
+                                <a href="<?= site_url('laporankeuntungan') ?>" class="dropdown-item">Laporan Keuntungan</a>
+                                <a href="<?= site_url('laporan/user') ?>" class="dropdown-item">Laporan User</a>
+                            <?php endif; ?>
+                            <a href="<?= site_url('historipembelian') ?>" class="dropdown-item">Histori Pembelian</a>
+                            <form action="<?= site_url('/logout') ?>" method="post" style="display: inline;">
+                                <button type="submit" class="dropdown-item">Logout</button>
+                            </form>
+                        </div>
+                    <?php } else { ?>
+                        <a href="<?= site_url('login') ?>" class="nav-item nav-link"><i class="fa fa-user"></i></a>
+                    <?php } ?>
+                </div>
 
-                <a href="<?= base_url()?>" class="nav-item nav-link">Beranda</a>
+                <a href="<?= base_url() ?>" class="nav-item nav-link">Beranda</a>
                 <a href="<?= site_url('about') ?>" class="nav-item nav-link">Tentang</a>
                 <a href="<?= site_url('courses') ?>" class="nav-item nav-link">Kursus</a>
                 <div class="nav-item dropdown">
-                <?php if($isLoggedIn) { ?>
-                    <a href="#" class="nav-item nav-link" data-bs-toggle="dropdown">Simulasi</a>
+                    <?php if ($isLoggedIn) { ?>
+                        <a href="#" class="nav-item nav-link" data-bs-toggle="dropdown">Simulasi</a>
                         <div class="dropdown-menu fade-down m-0">
                             <?php if (session()->get('role') === 'Admin') : ?>
-                            <a href="<?= site_url('infopengaturanujian') ?>" class="dropdown-item">Pengaturan Ujian</a>
-                            <a href="<?= site_url('tambahsoal') ?>" class="dropdown-item">Tambah Soal Ujian</a>
-                            <a href="<?= site_url('daftarsoal') ?>" class="dropdown-item">Lihat Daftar Soal Ujian</a>
+                                <a href="<?= site_url('infopengaturanujian') ?>" class="dropdown-item">Pengaturan Ujian</a>
+                                <a href="<?= site_url('tambahsoal') ?>" class="dropdown-item">Tambah Soal Ujian</a>
+                                <a href="<?= site_url('daftarsoal') ?>" class="dropdown-item">Lihat Daftar Soal Ujian</a>
+                                <a href="<?= site_url('laporan') ?>" class="dropdown-item">Lihat Laporan Nilai Ujian</a>
                             <?php endif; ?>
-                            <a href="<?= site_url('ujian') ?>" class="dropdown-item">Pilih Ujian</a>   
+                            <?php if (session()->get('role') === 'Siswa') : ?>
+                                <a href="<?= site_url('ujian') ?>" class="dropdown-item">Pilih Ujian</a>
+                            <?php endif; ?>
                         </div>
                     <?php } ?>
                 </div>
                 <a href="<?= site_url('contact') ?>" class="nav-item nav-link">Kontak</a>
-     
-                </div>
-                
 
-                <div id="google_translate_element">
-                </div>
-
-
-                </a>
             </div>
+
+
+            <div id="google_translate_element">
+            </div>
+
+
+            </a>
+        </div>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -144,7 +148,7 @@
                         </div>
                         <div class="ms-3">
                             <h5>Kantor</h5>
-                            <p class="mb-0"> Jalan Farrel Pasaribu, Simpang GG. Rambutan Daerah, Jl. Lapangan Sepak Bola, Kec. Siantar Marihat, Kota Pematang Siantar, Sumatera Utara 21121</p>
+                            <p class="mb-0"></p>
                         </div>
                     </div>
                     <div class="d-flex align-items-center mb-3">
@@ -154,7 +158,7 @@
                         </div>
                         <div class="ms-3">
                             <h5>No. Telepon</h5>
-                            <p class="mb-0">0821-6329-9216</p>
+                            <p class="mb-0"></p>
                         </div>
                     </div>
                     <div class="d-flex align-items-center">
@@ -164,7 +168,7 @@
                         </div>
                         <div class="ms-3">
                             <h5>Email</h5>
-                            <p class="mb-0">kursuonline.moracollege@gmail.com</p>
+                            <p class="mb-0"></p>
                         </div>
                     </div>
                 </div>
@@ -172,13 +176,12 @@
                 <div class="col-lg-6 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
                     <h5>Location Map</h5>
                     <div class="iframe-container">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d510023.09406838304!2d98.49120027343753!3d2.943210299999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3031851366fadd25%3A0xcf39e36b7a354a87!2sMora%20College%20Bimbel%20CPNS%2C%20PPPK%2C%20SKB%2C%20PTN%2C%20SEKOLAH%20KEDINASAN%2C%20SMP%2C%20SD%2C%20TPA%2C%20TOEFL%2C%20KOMPUTER%20OFFICE%2C%20PSIKOTEST!5e0!3m2!1sid!2sid!4v1741419671191!5m2!1sid!2sid" 
-                            width="100%" 
-                            height="400" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy" 
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3079.9103442475825!2d98.65297457359993!3d3.5629934964112144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x303131d6e3d2b367%3A0xc5edba7e577329d2!2sPoliteknik%20Negeri%20Medan!5e1!3m2!1sid!2sid!4v1748793051547!5m2!1sid!2sid"
+                            width="600"
+                            height="450"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade">
                         </iframe>
                     </div>
@@ -189,7 +192,7 @@
     <!-- Contact End -->
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+    <!-- <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-4 col-md-6">
@@ -201,21 +204,23 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <h4 class="text-white mb-3">Kontak</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i> Jalan Farrel Pasaribu, Simpang GG. Rambutan Daerah, Jl. Lapangan Sepak Bola, Kec. Siantar Marihat, Kota Pematang Siantar, Sumatera Utara 21121</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>0821-6329-9216</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>kursuonline.moracollege@gmail.com</p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i></p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i></p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i></p>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href="https://x.com/CollegeMora"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/moracollege/"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Footer End -->
+
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
