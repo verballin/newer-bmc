@@ -88,4 +88,5 @@ class UserModel extends Model
     {
         return $this->update($userId, ['boleh_ujian' => $status]);
     }
+    
 }

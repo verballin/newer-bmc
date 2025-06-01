@@ -71,3 +71,9 @@ $routes->post('simpanPembelianProduk', 'Home::simpanPembelianProduk');
 
 $routes->get('(:any)', 'Pages::view/$1');       // catch-all for pages like /about, /contact, etc.
 $routes->get('historinilai', 'HistoriNilai::index');
+
+$routes->get('laporanuser', 'LaporanUser::index', ['filter' => 'auth']);
+$routes->get('laporanuser/export-pdf', 'LaporanUser::exportPDF', ['filter' => 'auth']);
+$routes->get('laporanuser/filter/(:segment)', 'LaporanUser::filterByRole/$1', ['filter' => 'auth']);
+$routes->get('laporanuser/search', 'LaporanUser::searchUser', ['filter' => 'auth']);
+$routes->get('laporanuser/stats', 'LaporanUser::getUserStats', ['filter' => 'auth']);

@@ -301,5 +301,6 @@ class Home extends BaseController
         }
         return view('MainPage/historipembelian', $data);
     }
+    
 
 }

@@ -72,6 +72,7 @@
                                 <a href="<?= site_url('inputproduk') ?>" class="dropdown-item">Input Produk</a>
                                 <a href="<?= site_url('laporanpenjualan') ?>" class="dropdown-item">Laporan Penjualan</a>
                                 <a href="<?= site_url('laporankeuntungan') ?>" class="dropdown-item">Laporan Keuntungan</a>
+                                <a href="<?= site_url('laporanuser') ?>" class="dropdown-item">Laporan User</a>
                             <?php endif; ?>
                             <a href="<?= site_url('historipembelian') ?>" class="dropdown-item">Histori Pembelian</a>
                             <form action="<?= site_url('/logout') ?>" method="post" style="display: inline;">
